@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0381E4BC9D200286AC3 /* Localizable.strings */; };
+		2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0421E4CCDA700286AC3 /* InfoPlist.strings */; };
+		27434AE21E510AB600E0EDD3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27434AE11E510AB600E0EDD3 /* SettingsViewController.swift */; };
+		27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */; };
+		27505DD81E705726008C4715 /* ReportAffirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27505DD71E705726008C4715 /* ReportAffirmationVC.swift */; };
+		27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */; };
+		276E2F561E50BCFA006450E6 /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F551E50BCFA006450E6 /* FavoritesTableVC.swift */; };
+		276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */; };
+		276E2F5D1E522D80006450E6 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F5C1E522D80006450E6 /* UIScrollView+EmptyDataSet.m */; };
+		27C7F3B01E47C81B003DEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */; };
+		27C7F3B21E47C81B003DEFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3B11E47C81B003DEFB2 /* ViewController.swift */; };
+		27C7F3B51E47C81B003DEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B31E47C81B003DEFB2 /* Main.storyboard */; };
+		27C7F3B71E47C81B003DEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */; };
+		27C7F3BA1E47C81B003DEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */; };
+		27C7F3C51E47D375003DEFB2 /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3C41E47D375003DEFB2 /* Affirmations.swift */; };
+		27E2E0251E58EF270030866D /* Beer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27E2E0241E58EF270030866D /* Beer.mp3 */; };
+		27EEF2A51E4CD4AC00FD463A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27EEF2A41E4CD4AC00FD463A /* Info.plist */; };
+		27F5B0991E48690000599FA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F5B0981E48690000599FA9 /* GoogleService-Info.plist */; };
+		ACC315AF77FB676BD8F1A835 /* Pods_Daily_Affirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A252E5EBA2E434B34B5417 /* Pods_Daily_Affirmation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2719E0371E4BC9D200286AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2719E0391E4BC9D500286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2719E0411E4CCDA700286AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2719E0431E4CCDAC00286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27434AE11E510AB600E0EDD3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		27505DD71E705726008C4715 /* ReportAffirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportAffirmationVC.swift; sourceTree = "<group>"; };
+		27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		27505DDD1E71A61F008C4715 /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
+		276E2F551E50BCFA006450E6 /* FavoritesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
+		276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		276E2F5A1E522D7F006450E6 /* DailyAffirmation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyAffirmation-Bridging-Header.h"; sourceTree = "<group>"; };
+		276E2F5B1E522D80006450E6 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		276E2F5C1E522D80006450E6 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		27C7F3AC1E47C81B003DEFB2 /* Daily Affirmation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Affirmation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27C7F3B11E47C81B003DEFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27C7F3B41E47C81B003DEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27C7F3B91E47C81B003DEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27C7F3C41E47D375003DEFB2 /* Affirmations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
+		27E2E0241E58EF270030866D /* Beer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beer.mp3; sourceTree = "<group>"; };
+		27EEF2A41E4CD4AC00FD463A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27F5B0951E485ED400599FA9 /* Daily Affirmation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily Affirmation.entitlements"; sourceTree = "<group>"; };
+		27F5B0981E48690000599FA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7460D23D5B50912CADCA6EA9 /* Pods-Daily Affirmation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Affirmation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation.release.xcconfig"; sourceTree = "<group>"; };
+		B786BA1C145113076B71C01E /* Pods-Daily Affirmation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Affirmation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A252E5EBA2E434B34B5417 /* Pods_Daily_Affirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Affirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27C7F3A91E47C81A003DEFB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC315AF77FB676BD8F1A835 /* Pods_Daily_Affirmation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C056B30A8DDDF7DB8CF359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1A252E5EBA2E434B34B5417 /* Pods_Daily_Affirmation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		276E2F591E522D72006450E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				276E2F5B1E522D80006450E6 /* UIScrollView+EmptyDataSet.h */,
+				276E2F5C1E522D80006450E6 /* UIScrollView+EmptyDataSet.m */,
+				276E2F5A1E522D7F006450E6 /* DailyAffirmation-Bridging-Header.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		27C7F3A31E47C81A003DEFB2 = {
+			isa = PBXGroup;
+			children = (
+				27C7F3AE1E47C81B003DEFB2 /* Daily Affirmation */,
+				27C7F3AD1E47C81B003DEFB2 /* Products */,
+				FCF3F86E76B06BF89EBA7532 /* Pods */,
+				00C056B30A8DDDF7DB8CF359 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27C7F3AD1E47C81B003DEFB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27C7F3AC1E47C81B003DEFB2 /* Daily Affirmation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27C7F3AE1E47C81B003DEFB2 /* Daily Affirmation */ = {
+			isa = PBXGroup;
+			children = (
+				27E2E0231E58EF1C0030866D /* Sounds */,
+				276E2F591E522D72006450E6 /* Resources */,
+				27F5B0951E485ED400599FA9 /* Daily Affirmation.entitlements */,
+				27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */,
+				27C7F3B11E47C81B003DEFB2 /* ViewController.swift */,
+				27C7F3B31E47C81B003DEFB2 /* Main.storyboard */,
+				27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */,
+				27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */,
+				27F5B0981E48690000599FA9 /* GoogleService-Info.plist */,
+				27C7F3C41E47D375003DEFB2 /* Affirmations.swift */,
+				2719E0381E4BC9D200286AC3 /* Localizable.strings */,
+				2719E0421E4CCDA700286AC3 /* InfoPlist.strings */,
+				27EEF2A41E4CD4AC00FD463A /* Info.plist */,
+				276E2F551E50BCFA006450E6 /* FavoritesTableVC.swift */,
+				276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */,
+				27434AE11E510AB600E0EDD3 /* SettingsViewController.swift */,
+				27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */,
+				27505DD71E705726008C4715 /* ReportAffirmationVC.swift */,
+				27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */,
+			);
+			path = "Daily Affirmation";
+			sourceTree = "<group>";
+		};
+		27E2E0231E58EF1C0030866D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				27E2E0241E58EF270030866D /* Beer.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		FCF3F86E76B06BF89EBA7532 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B786BA1C145113076B71C01E /* Pods-Daily Affirmation.debug.xcconfig */,
+				7460D23D5B50912CADCA6EA9 /* Pods-Daily Affirmation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27C7F3AB1E47C81A003DEFB2 /* Daily Affirmation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C7F3BE1E47C81B003DEFB2 /* Build configuration list for PBXNativeTarget "Daily Affirmation" */;
+			buildPhases = (
+				71F972FDB3E28B9147E6CD5D /* [CP] Check Pods Manifest.lock */,
+				27C7F3A81E47C81A003DEFB2 /* Sources */,
+				27C7F3A91E47C81A003DEFB2 /* Frameworks */,
+				27C7F3AA1E47C81A003DEFB2 /* Resources */,
+				FACAA50374BE08D21C7ABD16 /* [CP] Embed Pods Frameworks */,
+				7DDAEF657126A321991E29B2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Daily Affirmation";
+			productName = "Daily Affirmation";
+			productReference = 27C7F3AC1E47C81B003DEFB2 /* Daily Affirmation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27C7F3A41E47C81A003DEFB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = efehelvaci;
+				TargetAttributes = {
+					27C7F3AB1E47C81A003DEFB2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NG2H4EFXTS;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 27C7F3A71E47C81A003DEFB2 /* Build configuration list for PBXProject "Daily Affirmation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				tr,
+			);
+			mainGroup = 27C7F3A31E47C81A003DEFB2;
+			productRefGroup = 27C7F3AD1E47C81B003DEFB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27C7F3AB1E47C81A003DEFB2 /* Daily Affirmation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27C7F3AA1E47C81A003DEFB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */,
+				2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */,
+				27C7F3BA1E47C81B003DEFB2 /* LaunchScreen.storyboard in Resources */,
+				27F5B0991E48690000599FA9 /* GoogleService-Info.plist in Resources */,
+				27E2E0251E58EF270030866D /* Beer.mp3 in Resources */,
+				27C7F3B71E47C81B003DEFB2 /* Assets.xcassets in Resources */,
+				27C7F3B51E47C81B003DEFB2 /* Main.storyboard in Resources */,
+				27EEF2A51E4CD4AC00FD463A /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71F972FDB3E28B9147E6CD5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DDAEF657126A321991E29B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FACAA50374BE08D21C7ABD16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27C7F3A81E47C81A003DEFB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */,
+				27C7F3C51E47D375003DEFB2 /* Affirmations.swift in Sources */,
+				27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */,
+				27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */,
+				27434AE21E510AB600E0EDD3 /* SettingsViewController.swift in Sources */,
+				276E2F561E50BCFA006450E6 /* FavoritesTableVC.swift in Sources */,
+				27C7F3B21E47C81B003DEFB2 /* ViewController.swift in Sources */,
+				276E2F5D1E522D80006450E6 /* UIScrollView+EmptyDataSet.m in Sources */,
+				27505DD81E705726008C4715 /* ReportAffirmationVC.swift in Sources */,
+				27C7F3B01E47C81B003DEFB2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2719E0381E4BC9D200286AC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2719E0371E4BC9D200286AC3 /* Base */,
+				2719E0391E4BC9D500286AC3 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2719E0421E4CCDA700286AC3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2719E0411E4CCDA700286AC3 /* Base */,
+				2719E0431E4CCDAC00286AC3 /* tr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27C7F3B31E47C81B003DEFB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C7F3B41E47C81B003DEFB2 /* Base */,
+				27505DDD1E71A61F008C4715 /* tr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C7F3B91E47C81B003DEFB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27C7F3BC1E47C81B003DEFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27C7F3BD1E47C81B003DEFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27C7F3BF1E47C81B003DEFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B786BA1C145113076B71C01E /* Pods-Daily Affirmation.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Daily Affirmation/Daily Affirmation.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Efe Helvaci (TBHQQ6MRF4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Daily Affirmation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Daily Affirmation/DailyAffirmation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		27C7F3C01E47C81B003DEFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7460D23D5B50912CADCA6EA9 /* Pods-Daily Affirmation.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Daily Affirmation/Daily Affirmation.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Efe Helvaci (NG2H4EFXTS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Daily Affirmation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Daily Affirmation/DailyAffirmation-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27C7F3A71E47C81A003DEFB2 /* Build configuration list for PBXProject "Daily Affirmation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C7F3BC1E47C81B003DEFB2 /* Debug */,
+				27C7F3BD1E47C81B003DEFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27C7F3BE1E47C81B003DEFB2 /* Build configuration list for PBXNativeTarget "Daily Affirmation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C7F3BF1E47C81B003DEFB2 /* Debug */,
+				27C7F3C01E47C81B003DEFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27C7F3A41E47C81A003DEFB2 /* Project object */;
+}
