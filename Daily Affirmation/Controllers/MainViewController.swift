@@ -11,9 +11,9 @@ import SwifterSwift
 import FTIndicator
 import Async
 import AVFoundation
-import FirebaseAnalytics
+import Firebase
 
-class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class MainViewController: UIViewController {
 
     @IBOutlet var affirmationLabel: UILabel!
     @IBOutlet var beforeImage: UIImageView!
@@ -116,21 +116,23 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
     
     @IBAction func favoritesButtonClicked(_ sender: Any) {
-        let favoritesTableVC = storyboard?.instantiateViewController(withIdentifier: "FavoritesTableVC") as! FavoritesTableVC
-        favoritesTableVC.modalPresentationStyle = .pageSheet
-        
-        present(favoritesTableVC, animated: true, completion: nil)
+        if let favoritesTableVC = storyboard?.instantiateViewController(withIdentifier: "FavoritesTableVC") as? FavoritesTableViewController {
+            favoritesTableVC.modalPresentationStyle = .pageSheet
+            
+            present(favoritesTableVC, animated: true, completion: nil)
+        }
     }
 
     @IBAction func settingsButtonClicked(_ sender: Any) {
-        let settingsVC = storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
-        settingsVC.modalPresentationStyle = .pageSheet
-        
-        present(settingsVC, animated: true, completion: nil)
+        if let settingsVC = storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController {
+            settingsVC.modalPresentationStyle = .pageSheet
+            
+            present(settingsVC, animated: true, completion: nil)
+        }
     }
 
     @IBAction func reportAffirmationButtonClicked(_ sender: Any) {
-        if let reportVC = storyboard?.instantiateViewController(withIdentifier: "ReportAffirmationVC") as? ReportAffirmationVC {
+        if let reportVC = storyboard?.instantiateViewController(withIdentifier: "ReportAffirmationVC") as? ReportAffirmationViewController {
             reportVC.modalPresentationStyle = .popover
             reportVC.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width - 32 , height: 290)
             
@@ -140,9 +142,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             popoverController?.sourceView = self.view
             popoverController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
             
-            reportVC.affirmation = self.affirmationLabel.text!
-            reportVC.affirmationNumber = self.randomNumber
-            reportVC.mainPage = self
+            reportVC.delegate = self
             
             self.present(reportVC, animated: true, completion: nil)
         }
@@ -158,7 +158,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             })
         }
 
-        UIView.animate(withDuration: 2, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+        UIView.animate(withDuration: 2.0,
+                       delay: 0,
+                       options: UIViewAnimationOptions.beginFromCurrentState,
+                       animations: {
             self.beforeImage.alpha = 0
             self.afterImage.alpha = 1.0
             self.affirmationLabel.alpha = 1.0
@@ -274,8 +277,27 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             }
         }
     }
-    
+}
+
+extension MainViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.none
+    }
+}
+
+extension MainViewController: ReportAffirmationDelegate {
+    func reportAffirmation(withCause cause: String) {
+        FIRAnalytics.logEvent(withName: "report", parameters: [ "affirmation" : self.affirmationLabel.text! as NSObject,
+                                                                "cause" : cause as NSObject,
+                                                                "affirmation_number": self.randomNumber as NSObject])
+        
+        var bannedAffirmationNumbers = (UserDefaults.standard.array(forKey: "bannedAffirmations") as? [Int]) ?? [Int]()
+        bannedAffirmationNumbers.append(self.randomNumber)
+        defaults.set(bannedAffirmationNumbers, forKey: "bannedAffirmations")
+        
+        getAffirmation(new: true)
+        
+        FTIndicator.showNotification(withTitle: NSLocalizedString("ReportNotificationTitle", comment: "ReportNotificationTitle"),
+                                     message: NSLocalizedString("ReportNotificationMessage", comment: "ReportNotificationMessage"))
     }
 }

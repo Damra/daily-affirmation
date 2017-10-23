@@ -9,22 +9,22 @@
 /* Begin PBXBuildFile section */
 		2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0381E4BC9D200286AC3 /* Localizable.strings */; };
 		2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0421E4CCDA700286AC3 /* InfoPlist.strings */; };
-		27434AE21E510AB600E0EDD3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27434AE11E510AB600E0EDD3 /* SettingsViewController.swift */; };
 		27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */; };
-		27505DD81E705726008C4715 /* ReportAffirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27505DD71E705726008C4715 /* ReportAffirmationVC.swift */; };
 		27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */; };
-		276E2F561E50BCFA006450E6 /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F551E50BCFA006450E6 /* FavoritesTableVC.swift */; };
 		276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */; };
-		276E2F5D1E522D80006450E6 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F5C1E522D80006450E6 /* UIScrollView+EmptyDataSet.m */; };
+		27AFD7501F9BB4B2006DA81B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27AFD74F1F9BB4B2006DA81B /* GoogleService-Info.plist */; };
+		27AFD75D1F9BB715006DA81B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFD7591F9BB714006DA81B /* SettingsViewController.swift */; };
+		27AFD75E1F9BB715006DA81B /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFD75A1F9BB715006DA81B /* FavoritesTableViewController.swift */; };
+		27AFD75F1F9BB715006DA81B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFD75B1F9BB715006DA81B /* MainViewController.swift */; };
+		27AFD7601F9BB715006DA81B /* ReportAffirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFD75C1F9BB715006DA81B /* ReportAffirmationViewController.swift */; };
+		27AFD7681F9D1711006DA81B /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFD7671F9D1711006DA81B /* Affirmation.swift */; };
+		27AFD76B1F9D1DDA006DA81B /* Affirmations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27AFD76D1F9D1DDA006DA81B /* Affirmations.plist */; };
 		27C7F3B01E47C81B003DEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */; };
-		27C7F3B21E47C81B003DEFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3B11E47C81B003DEFB2 /* ViewController.swift */; };
 		27C7F3B51E47C81B003DEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B31E47C81B003DEFB2 /* Main.storyboard */; };
 		27C7F3B71E47C81B003DEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */; };
 		27C7F3BA1E47C81B003DEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */; };
 		27C7F3C51E47D375003DEFB2 /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3C41E47D375003DEFB2 /* Affirmations.swift */; };
-		27E2E0251E58EF270030866D /* Beer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27E2E0241E58EF270030866D /* Beer.mp3 */; };
 		27EEF2A51E4CD4AC00FD463A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27EEF2A41E4CD4AC00FD463A /* Info.plist */; };
-		27F5B0991E48690000599FA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F5B0981E48690000599FA9 /* GoogleService-Info.plist */; };
 		ACC315AF77FB676BD8F1A835 /* Pods_Daily_Affirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A252E5EBA2E434B34B5417 /* Pods_Daily_Affirmation.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,27 +33,26 @@
 		2719E0391E4BC9D500286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2719E0411E4CCDA700286AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2719E0431E4CCDAC00286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		27434AE11E510AB600E0EDD3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
-		27505DD71E705726008C4715 /* ReportAffirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportAffirmationVC.swift; sourceTree = "<group>"; };
 		27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		27505DDD1E71A61F008C4715 /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
-		276E2F551E50BCFA006450E6 /* FavoritesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
 		276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
-		276E2F5A1E522D7F006450E6 /* DailyAffirmation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyAffirmation-Bridging-Header.h"; sourceTree = "<group>"; };
-		276E2F5B1E522D80006450E6 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
-		276E2F5C1E522D80006450E6 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		27AFD74F1F9BB4B2006DA81B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27AFD7591F9BB714006DA81B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		27AFD75A1F9BB715006DA81B /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		27AFD75B1F9BB715006DA81B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		27AFD75C1F9BB715006DA81B /* ReportAffirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportAffirmationViewController.swift; sourceTree = "<group>"; };
+		27AFD7671F9D1711006DA81B /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
+		27AFD76C1F9D1DDA006DA81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Affirmations.plist; sourceTree = "<group>"; };
+		27AFD76F1F9D27E8006DA81B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = tr; path = tr.lproj/Affirmations.plist; sourceTree = "<group>"; };
 		27C7F3AC1E47C81B003DEFB2 /* Daily Affirmation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Affirmation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27C7F3B11E47C81B003DEFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27C7F3B41E47C81B003DEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27C7F3B91E47C81B003DEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27C7F3C41E47D375003DEFB2 /* Affirmations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
-		27E2E0241E58EF270030866D /* Beer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beer.mp3; sourceTree = "<group>"; };
 		27EEF2A41E4CD4AC00FD463A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F5B0951E485ED400599FA9 /* Daily Affirmation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily Affirmation.entitlements"; sourceTree = "<group>"; };
-		27F5B0981E48690000599FA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7460D23D5B50912CADCA6EA9 /* Pods-Daily Affirmation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Affirmation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation.release.xcconfig"; sourceTree = "<group>"; };
 		B786BA1C145113076B71C01E /* Pods-Daily Affirmation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Affirmation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation.debug.xcconfig"; sourceTree = "<group>"; };
 		D1A252E5EBA2E434B34B5417 /* Pods_Daily_Affirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Affirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,14 +78,79 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		276E2F591E522D72006450E6 /* Resources */ = {
+		27AFD7571F9BB6D8006DA81B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				276E2F5B1E522D80006450E6 /* UIScrollView+EmptyDataSet.h */,
-				276E2F5C1E522D80006450E6 /* UIScrollView+EmptyDataSet.m */,
-				276E2F5A1E522D7F006450E6 /* DailyAffirmation-Bridging-Header.h */,
+				27AFD7581F9BB6EA006DA81B /* Cells */,
 			);
-			name = Resources;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27AFD7581F9BB6EA006DA81B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */,
+				27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */,
+				27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		27AFD7611F9BB726006DA81B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27AFD75A1F9BB715006DA81B /* FavoritesTableViewController.swift */,
+				27AFD75C1F9BB715006DA81B /* ReportAffirmationViewController.swift */,
+				27AFD7591F9BB714006DA81B /* SettingsViewController.swift */,
+				27AFD75B1F9BB715006DA81B /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27AFD7621F9BB773006DA81B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */,
+				27C7F3C41E47D375003DEFB2 /* Affirmations.swift */,
+				2719E0381E4BC9D200286AC3 /* Localizable.strings */,
+				27AFD76D1F9D1DDA006DA81B /* Affirmations.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		27AFD7631F9BB8E6006DA81B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				27AFD74F1F9BB4B2006DA81B /* GoogleService-Info.plist */,
+				2719E0421E4CCDA700286AC3 /* InfoPlist.strings */,
+				27EEF2A41E4CD4AC00FD463A /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		27AFD7641F9BBB71006DA81B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		27AFD7651F9BBBA8006DA81B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27C7F3B31E47C81B003DEFB2 /* Main.storyboard */,
+				27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		27AFD7661F9D16EB006DA81B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27AFD7671F9D1711006DA81B /* Affirmation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		27C7F3A31E47C81A003DEFB2 = {
@@ -96,6 +160,8 @@
 				27C7F3AD1E47C81B003DEFB2 /* Products */,
 				FCF3F86E76B06BF89EBA7532 /* Pods */,
 				00C056B30A8DDDF7DB8CF359 /* Frameworks */,
+				27AFD7621F9BB773006DA81B /* Resources */,
+				27AFD7631F9BB8E6006DA81B /* Support */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,35 +176,14 @@
 		27C7F3AE1E47C81B003DEFB2 /* Daily Affirmation */ = {
 			isa = PBXGroup;
 			children = (
-				27E2E0231E58EF1C0030866D /* Sounds */,
-				276E2F591E522D72006450E6 /* Resources */,
 				27F5B0951E485ED400599FA9 /* Daily Affirmation.entitlements */,
-				27C7F3AF1E47C81B003DEFB2 /* AppDelegate.swift */,
-				27C7F3B11E47C81B003DEFB2 /* ViewController.swift */,
-				27C7F3B31E47C81B003DEFB2 /* Main.storyboard */,
-				27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */,
-				27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */,
-				27F5B0981E48690000599FA9 /* GoogleService-Info.plist */,
-				27C7F3C41E47D375003DEFB2 /* Affirmations.swift */,
-				2719E0381E4BC9D200286AC3 /* Localizable.strings */,
-				2719E0421E4CCDA700286AC3 /* InfoPlist.strings */,
-				27EEF2A41E4CD4AC00FD463A /* Info.plist */,
-				276E2F551E50BCFA006450E6 /* FavoritesTableVC.swift */,
-				276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */,
-				27434AE11E510AB600E0EDD3 /* SettingsViewController.swift */,
-				27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */,
-				27505DD71E705726008C4715 /* ReportAffirmationVC.swift */,
-				27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */,
+				27AFD7611F9BB726006DA81B /* Controllers */,
+				27AFD7641F9BBB71006DA81B /* Delegates */,
+				27AFD7571F9BB6D8006DA81B /* Views */,
+				27AFD7651F9BBBA8006DA81B /* Storyboards */,
+				27AFD7661F9D16EB006DA81B /* Models */,
 			);
 			path = "Daily Affirmation";
-			sourceTree = "<group>";
-		};
-		27E2E0231E58EF1C0030866D /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				27E2E0241E58EF270030866D /* Beer.mp3 */,
-			);
-			name = Sounds;
 			sourceTree = "<group>";
 		};
 		FCF3F86E76B06BF89EBA7532 /* Pods */ = {
@@ -225,12 +270,12 @@
 			files = (
 				2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */,
 				2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */,
+				27AFD7501F9BB4B2006DA81B /* GoogleService-Info.plist in Resources */,
 				27C7F3BA1E47C81B003DEFB2 /* LaunchScreen.storyboard in Resources */,
-				27F5B0991E48690000599FA9 /* GoogleService-Info.plist in Resources */,
-				27E2E0251E58EF270030866D /* Beer.mp3 in Resources */,
 				27C7F3B71E47C81B003DEFB2 /* Assets.xcassets in Resources */,
 				27C7F3B51E47C81B003DEFB2 /* Main.storyboard in Resources */,
 				27EEF2A51E4CD4AC00FD463A /* Info.plist in Resources */,
+				27AFD76B1F9D1DDA006DA81B /* Affirmations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,13 +288,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daily Affirmation-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7DDAEF657126A321991E29B2 /* [CP] Copy Pods Resources */ = {
@@ -273,9 +321,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
+				"${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TBEmptyDataSet/TBEmptyDataSet.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TBEmptyDataSet.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -289,16 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AFD7681F9D1711006DA81B /* Affirmation.swift in Sources */,
 				276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */,
 				27C7F3C51E47D375003DEFB2 /* Affirmations.swift in Sources */,
+				27AFD75D1F9BB715006DA81B /* SettingsViewController.swift in Sources */,
+				27AFD75F1F9BB715006DA81B /* MainViewController.swift in Sources */,
 				27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */,
 				27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */,
-				27434AE21E510AB600E0EDD3 /* SettingsViewController.swift in Sources */,
-				276E2F561E50BCFA006450E6 /* FavoritesTableVC.swift in Sources */,
-				27C7F3B21E47C81B003DEFB2 /* ViewController.swift in Sources */,
-				276E2F5D1E522D80006450E6 /* UIScrollView+EmptyDataSet.m in Sources */,
-				27505DD81E705726008C4715 /* ReportAffirmationVC.swift in Sources */,
+				27AFD75E1F9BB715006DA81B /* FavoritesTableViewController.swift in Sources */,
 				27C7F3B01E47C81B003DEFB2 /* AppDelegate.swift in Sources */,
+				27AFD7601F9BB715006DA81B /* ReportAffirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +380,15 @@
 				2719E0431E4CCDAC00286AC3 /* tr */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27AFD76D1F9D1DDA006DA81B /* Affirmations.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27AFD76C1F9D1DDA006DA81B /* Base */,
+				27AFD76F1F9D27E8006DA81B /* tr */,
+			);
+			name = Affirmations.plist;
 			sourceTree = "<group>";
 		};
 		27C7F3B31E47C81B003DEFB2 /* Main.storyboard */ = {
@@ -449,14 +517,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Efe Helvaci (TBHQQ6MRF4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Daily Affirmation/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Daily Affirmation/DailyAffirmation-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -473,14 +541,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Efe Helvaci (NG2H4EFXTS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Daily Affirmation/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Daily Affirmation/DailyAffirmation-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

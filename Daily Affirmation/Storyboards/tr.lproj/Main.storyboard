@@ -1,21 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Daily_Affirmation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Daily_Affirmation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -137,15 +143,14 @@
                             <constraint firstAttribute="trailing" secondItem="Cy7-pd-WQK" secondAttribute="trailing" id="32W-Ic-5q8"/>
                             <constraint firstAttribute="trailing" secondItem="FM5-4m-k4a" secondAttribute="trailing" id="3Am-9w-VZE"/>
                             <constraint firstItem="FM5-4m-k4a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8B8-xF-pFc"/>
+                            <constraint firstAttribute="bottom" secondItem="FM5-4m-k4a" secondAttribute="bottom" id="AVu-Qb-4yM"/>
                             <constraint firstItem="wYi-B0-AqR" firstAttribute="centerY" secondItem="IAt-PT-qw6" secondAttribute="centerY" id="BBg-hr-aQY"/>
                             <constraint firstItem="SdA-GT-hVk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="C8L-uE-FpG"/>
                             <constraint firstAttribute="trailing" secondItem="XO4-hT-jbh" secondAttribute="trailing" constant="8" id="Edp-Sk-xaA"/>
+                            <constraint firstItem="Cy7-pd-WQK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fvr-Vj-qdI"/>
                             <constraint firstItem="Cy7-pd-WQK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GUw-O7-73Z"/>
-                            <constraint firstItem="Cy7-pd-WQK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="GtK-pk-Kl7"/>
-                            <constraint firstItem="FM5-4m-k4a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="HMw-iS-RDh"/>
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="top" secondItem="XO4-hT-jbh" secondAttribute="bottom" constant="8" id="MsO-2G-ffs"/>
                             <constraint firstItem="cZN-Fm-oWa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="S7O-7F-N1w"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cy7-pd-WQK" secondAttribute="bottom" id="SiC-mC-PCW"/>
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ukg-l7-Q1N"/>
                             <constraint firstItem="mbW-2N-ZaN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQe-SI-FSy"/>
                             <constraint firstItem="tlu-5b-jf5" firstAttribute="centerY" secondItem="IAt-PT-qw6" secondAttribute="centerY" id="WNc-24-IBs"/>
@@ -156,12 +161,13 @@
                             <constraint firstItem="XO4-hT-jbh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="dQZ-Al-lSo"/>
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="top" secondItem="SdA-GT-hVk" secondAttribute="bottom" constant="40" id="dXy-it-gdD"/>
                             <constraint firstItem="qNN-Hj-0UB" firstAttribute="centerY" secondItem="SdA-GT-hVk" secondAttribute="centerY" id="fTa-Eh-3fB"/>
+                            <constraint firstItem="FM5-4m-k4a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kMH-ha-1Jb"/>
                             <constraint firstAttribute="trailing" secondItem="cZN-Fm-oWa" secondAttribute="trailing" constant="8" id="le2-hm-TWV"/>
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2/5" id="mei-QB-LZf"/>
                             <constraint firstItem="tlu-5b-jf5" firstAttribute="leading" secondItem="IAt-PT-qw6" secondAttribute="trailing" constant="8" id="taW-O1-EEP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mbW-2N-ZaN" secondAttribute="bottom" id="tg9-yJ-ttj"/>
+                            <constraint firstAttribute="bottom" secondItem="Cy7-pd-WQK" secondAttribute="bottom" id="u30-0B-hdh"/>
                             <constraint firstItem="SdA-GT-hVk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="zBz-qM-qG5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FM5-4m-k4a" secondAttribute="bottom" id="zDu-sW-MMo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -178,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="94" y="124"/>
         </scene>
-        <!--Report AffirmationVC-->
+        <!--Report Affirmation View Controller-->
         <scene sceneID="7p6-FP-suJ">
             <objects>
-                <viewController storyboardIdentifier="ReportAffirmationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6pC-dN-gZw" customClass="ReportAffirmationVC" customModule="Daily_Affirmation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportAffirmationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6pC-dN-gZw" customClass="ReportAffirmationViewController" customModule="Daily_Affirmation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N8a-t0-xcq"/>
                         <viewControllerLayoutGuide type="bottom" id="fxz-XE-iHn"/>
@@ -191,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu olumlamayı sevmedim çünkü..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-kn-e94">
-                                <rect key="frame" x="16" y="28" width="343" height="42"/>
+                                <rect key="frame" x="16" y="8" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="d6l-Ay-ahL"/>
                                 </constraints>
@@ -203,7 +209,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SdK-2A-moP">
-                                <rect key="frame" x="0.0" y="70" width="375" height="132"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="132"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="y2b-Xj-Yfy"/>
@@ -213,11 +219,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jvo-Jy-fbY" id="fsY-mU-f9Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Çok alakasız" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FgP-wW-gjV">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -237,7 +243,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Bir daha bu olumlamayı görmeyeceksiniz!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PT-Nw-Nhj">
-                                <rect key="frame" x="16" y="214" width="343" height="39"/>
+                                <rect key="frame" x="16" y="194" width="343" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="kT5-uE-thy"/>
                                 </constraints>
@@ -299,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="666.56671664167925"/>
         </scene>
-        <!--Empty Data Set Delegate-->
+        <!--Favorites Table View Controller-->
         <scene sceneID="A4Q-ZJ-CDe">
             <objects>
-                <viewController storyboardIdentifier="FavoritesTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FZz-45-jiC" customClass="FavoritesTableVC" customModule="Daily_Affirmation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FZz-45-jiC" customClass="FavoritesTableViewController" customModule="Daily_Affirmation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mge-5n-SmS"/>
                         <viewControllerLayoutGuide type="bottom" id="kml-43-nvi"/>
@@ -361,7 +367,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JBf-q4-dOY" id="4OL-A3-BeE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JJ-QW-t5m">
@@ -406,8 +412,6 @@
                                 <connections>
                                     <outlet property="dataSource" destination="FZz-45-jiC" id="U45-Sz-kqQ"/>
                                     <outlet property="delegate" destination="FZz-45-jiC" id="pHL-Oo-3MV"/>
-                                    <outlet property="emptyDataSetDelegate" destination="FZz-45-jiC" id="23G-Nx-bDD"/>
-                                    <outlet property="emptyDataSetSource" destination="FZz-45-jiC" id="wXo-1e-DAd"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -492,7 +496,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tZ6-ax-Cp7" id="mu3-cf-3Dr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bildirim ayarları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-0X-zJO">

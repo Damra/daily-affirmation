@@ -6,4 +6,5 @@ target 'Daily Affirmation' do
 	pod 'Firebase/AdMob'
 	pod 'FTIndicator'
 	pod 'AsyncSwift', '~> 2.0.0'
+    pod 'TBEmptyDataSet'
 end

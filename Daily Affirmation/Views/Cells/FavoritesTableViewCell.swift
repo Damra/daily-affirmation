@@ -12,6 +12,7 @@ class FavoritesTableViewCell: UITableViewCell {
 
     @IBOutlet var favoriteButton: UIButton!
     @IBOutlet var label: UILabel!
+    
     var favorite : Bool = true
     
     override func awakeFromNib() {

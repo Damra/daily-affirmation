@@ -7,23 +7,27 @@
 //
 
 import UIKit
-import Firebase
-import FTIndicator
 
-class ReportAffirmationVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol ReportAffirmationDelegate {
+    func reportAffirmation(withCause cause: String)
+}
+
+class ReportAffirmationViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var affirmation = ""
-    var affirmationNumber = 0
-    var mainPage : ViewController!
+    var delegate: ReportAffirmationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ReportAffirmationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "reportOptionCell") as? ReportTableViewCell {
             switch indexPath.row {
@@ -52,41 +56,26 @@ class ReportAffirmationVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var reportName = "affirmation_report"
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var reportCause = "Not Specified"
         
         switch indexPath.row {
         case 0:
-            reportName = "\(affirmationNumber)_irrelevant_affirmation_report"
+            reportCause = "Irrelevant"
             break
         case 1:
-            reportName = "\(affirmationNumber)_harrassing_affirmation_report"
+            reportCause = "Harrassing"
             break
         case 2:
-            reportName = "\(affirmationNumber)_noReason_affirmation_report"
+            reportCause = "No Reason"
             break
         default:
             break
         }
         
-        FIRAnalytics.logEvent(withName: reportName, parameters: [
-            "affirmation" : affirmation as NSObject,
-            ])
+        delegate?.reportAffirmation(withCause: reportCause)
         
-        var bannedAffirmationNumbers = (UserDefaults.standard.array(forKey: "bannedAffirmations") as? [Int]) ?? [Int]()
-        bannedAffirmationNumbers.append(affirmationNumber)
-        UserDefaults.standard.set(bannedAffirmationNumbers, forKey: "bannedAffirmations")
-        
-        mainPage.getAffirmation(new: true)
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        dismiss(animated: true, completion: {
-            FTIndicator.showNotification(withTitle: NSLocalizedString("ReportNotificationTitle", comment: "ReportNotificationTitle"),
-                                         message: NSLocalizedString("ReportNotificationMessage", comment: "ReportNotificationMessage"))
-        })
-    }
-
-    @IBAction func cancelButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }
