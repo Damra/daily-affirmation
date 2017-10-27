@@ -23,11 +23,15 @@ class MainViewController: UIViewController {
     @IBOutlet var heart: UIImageView!
     @IBOutlet var reportButton: UIButton!
     
-    let defaults = UserDefaults.standard
-    
-    var favorites = [String]()
-    var today : String!
-    var randomNumber = 0
+    var dailyAffirmation: Affirmation! {
+        didSet {
+            affirmationLabel.text = dailyAffirmation.clause
+
+            speech = AVSpeechUtterance(string: dailyAffirmation.clause)
+            
+            dailyAffirmation.isSeen = true
+        }
+    }
     
     var speech : AVSpeechUtterance!
     let synthesizer = AVSpeechSynthesizer()
@@ -52,21 +56,7 @@ class MainViewController: UIViewController {
         // Checking default setting for text to speech.
         speechEnabled = !UserDefaults.standard.bool(forKey: "textToSpeechDisabled")
         
-        if let savedFavorites = UserDefaults.standard.array(forKey: "favoriteAffirmations") {
-            favorites = savedFavorites as! [String]
-        }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy"
-        
-        today = dateFormatter.string(from: Date())
-        let lastAffirmationDate = defaults.string(forKey: "lastAffirmationDate")
-        
-        if today == lastAffirmationDate {
-            getAffirmation(new: false)
-        } else {
-            getAffirmation(new: true)
-        }
+        dailyAffirmation = Affirmation.daily()
         
         let localLang = NSLocale.preferredLanguages[0]
         
@@ -79,39 +69,25 @@ class MainViewController: UIViewController {
             
         }
         
-        if !defaults.bool(forKey: "didShowInstruction") {
+        if !UserDefaults.standard.bool(forKey: "didShowInstruction") {
             instructionLabel.isHidden = false
-            defaults.set(true, forKey: "didShowInstruction")
+            UserDefaults.standard.set(true, forKey: "didShowInstruction")
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func startedPressing(_ sender: Any) {
-        print("Started pressing")
-        
-        if !instructionLabel.isHidden {
-            instructionLabel.isHidden = true
-        }
-        
         showAffirmation()
     }
     
     @IBAction func stoppedPressing(_ sender: Any) {
-        print("Stopped pressing")
         hideAffirmation()
     }
     
     @IBAction func stoppedPressing2(_ sender: Any) {
-        print("Stopped pressing")
         hideAffirmation()
     }
 
     @IBAction func stoppedPressing3(_ sender: Any) {
-        print("Stopped pressing")
         hideAffirmation()
     }
     
@@ -132,19 +108,19 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func reportAffirmationButtonClicked(_ sender: Any) {
-        if let reportVC = storyboard?.instantiateViewController(withIdentifier: "ReportAffirmationVC") as? ReportAffirmationViewController {
-            reportVC.modalPresentationStyle = .popover
-            reportVC.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width - 32 , height: 290)
+        if let reportViewController = storyboard?.instantiateViewController(withIdentifier: "ReportAffirmationVC") as? ReportAffirmationViewController {
+            reportViewController.modalPresentationStyle = .popover
+            reportViewController.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width - 32 , height: 290)
             
-            let popoverController = reportVC.popoverPresentationController
+            let popoverController = reportViewController.popoverPresentationController
             popoverController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
             popoverController?.delegate = self
             popoverController?.sourceView = self.view
             popoverController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
             
-            reportVC.delegate = self
+            reportViewController.delegate = self
             
-            self.present(reportVC, animated: true, completion: nil)
+            self.present(reportViewController, animated: true, completion: nil)
         }
     }
     
@@ -165,11 +141,14 @@ class MainViewController: UIViewController {
             self.beforeImage.alpha = 0
             self.afterImage.alpha = 1.0
             self.affirmationLabel.alpha = 1.0
+            self.instructionLabel.alpha = 0
         }, completion: { _ in
             if self.reportButton.isHidden {
                 self.reportButton.isHidden = false
                 self.reportButton.shake()
             }
+            
+            self.instructionLabel.isHidden = true
         })
     }
     
@@ -186,11 +165,7 @@ class MainViewController: UIViewController {
     }
     
     func doubleTapped() {
-        if !favorites.contains(affirmationLabel.text!) {
-            favorites.append(affirmationLabel.text!)
-            
-            UserDefaults.standard.set(favorites, forKey: "favoriteAffirmations")
-        }
+        dailyAffirmation.isFavorite = true
         
         self.heart.alpha = 1.0
         UIView.animate(withDuration: 0.2, animations: {
@@ -203,54 +178,6 @@ class MainViewController: UIViewController {
                 }, completion: nil)
             })
         })
-    }
-    
-    func getAffirmation(new: Bool) {
-        if new {
-            let bannedAffirmationNumbers = (defaults.array(forKey: "bannedAffirmations") as? [Int]) ?? [Int]()
-            var seenAffirmationNumbers = (defaults.array(forKey: "seenAffirmations") as? [Int]) ?? [Int]()
-            
-            // If all affirmations are banned, random number will stay as zero.
-            if bannedAffirmationNumbers.count < affirmations.count {
-                if seenAffirmationNumbers.count < (affirmations.count - bannedAffirmationNumbers.count) {
-                    var continueSearch = true
-                    
-                    repeat{
-                        self.randomNumber = Int.randomBetween(min: 0, max: affirmations.count-1)
-                        
-                        if (!bannedAffirmationNumbers.contains(randomNumber) && !seenAffirmationNumbers.contains(randomNumber)){continueSearch = false}
-                    } while continueSearch
-                } else {
-                    UserDefaults.standard.removeObject(forKey: "seenAffirmations")
-                    
-                    getAffirmation(new: true)
-                    return
-                }
-            } else {
-                UserDefaults.standard.removeObject(forKey: "bannedAffirmations")
-                
-                getAffirmation(new: true)
-                return
-            }
-            
-            affirmationLabel.text = NSLocalizedString(affirmations[self.randomNumber], comment: "Quote")
-            
-            speech = AVSpeechUtterance(string: NSLocalizedString(affirmations[self.randomNumber], comment: "Quote"))
-            
-            seenAffirmationNumbers.append(self.randomNumber)
-            
-            defaults.set(seenAffirmationNumbers, forKey: "seenAffirmations")
-            defaults.set(today, forKey: "lastAffirmationDate")
-            defaults.set(affirmations[self.randomNumber], forKey: "lastAffirmation")
-        } else {
-            if let affirmation = defaults.string(forKey: "lastAffirmation"){
-                affirmationLabel.text = NSLocalizedString(affirmation, comment: "QuoteRepeat")
-                
-                self.randomNumber = affirmations.index(of: affirmation) ?? -1
-                
-                speech = AVSpeechUtterance(string: NSLocalizedString(affirmation, comment: "QuoteRepeat"))
-            }
-        }
     }
     
     func hailTheTraveller() {
@@ -287,15 +214,13 @@ extension MainViewController: UIPopoverPresentationControllerDelegate {
 
 extension MainViewController: ReportAffirmationDelegate {
     func reportAffirmation(withCause cause: String) {
-        FIRAnalytics.logEvent(withName: "report", parameters: [ "affirmation" : self.affirmationLabel.text! as NSObject,
+        FIRAnalytics.logEvent(withName: "report", parameters: [ "affirmation" : dailyAffirmation.clause as NSObject,
                                                                 "cause" : cause as NSObject,
-                                                                "affirmation_number": self.randomNumber as NSObject])
+                                                                "affirmation_id": dailyAffirmation.id as NSObject])
         
-        var bannedAffirmationNumbers = (UserDefaults.standard.array(forKey: "bannedAffirmations") as? [Int]) ?? [Int]()
-        bannedAffirmationNumbers.append(self.randomNumber)
-        defaults.set(bannedAffirmationNumbers, forKey: "bannedAffirmations")
+        dailyAffirmation.isBanned = true
         
-        getAffirmation(new: true)
+        dailyAffirmation = Affirmation.daily()
         
         FTIndicator.showNotification(withTitle: NSLocalizedString("ReportNotificationTitle", comment: "ReportNotificationTitle"),
                                      message: NSLocalizedString("ReportNotificationMessage", comment: "ReportNotificationMessage"))

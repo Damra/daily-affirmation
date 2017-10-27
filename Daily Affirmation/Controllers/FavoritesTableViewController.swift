@@ -13,7 +13,7 @@ class FavoritesTableViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var favorites = [String]() {
+    var favorites = [Affirmation]() {
         didSet {
             tableView.reloadData()
         }
@@ -26,7 +26,7 @@ class FavoritesTableViewController: UIViewController {
         tableView.emptyDataSetDelegate = self
         tableView.emptyDataSetDataSource = self
         
-        favorites = UserDefaults.standard.array(forKey: "favoriteAffirmations") as? [String] ?? [String]()
+        favorites = Affirmation.favorites
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -38,7 +38,7 @@ class FavoritesTableViewController: UIViewController {
 extension FavoritesTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell") as? FavoritesTableViewCell {
-            cell.label.text = favorites[indexPath.row]
+            cell.affirmation = favorites[indexPath.row]
             
             return cell
         }

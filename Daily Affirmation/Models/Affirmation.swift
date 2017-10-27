@@ -9,18 +9,24 @@
 import Foundation
 import FTIndicator
 
-class Affirmation {
+class Affirmation: NSObject, NSCoding {
     
     struct AffirmationStoreKeys {
-        static let BannedAffirmationsKey  = "BannedAffirmations"
-        static let FavoriteAffirmationKey = "FavoriteAffirmations"
-        static let SeenAffirmationKey    = "SeenAffirmations"
+        static let BannedAffirmationsKey   = "BannedAffirmations"
+        static let FavoriteAffirmationKey  = "FavoriteAffirmations"
+        static let SeenAffirmationKey      = "SeenAffirmations"
+        static let LastSeenAffirmationData = "LastSeenAffirmation"
+        static let LastLaunchDate          = "LastLaunchDate"
     }
     
     var id: Int
     var clause: String
     var isFavorite: Bool {
         willSet {
+            guard isFavorite != newValue else {
+                return
+            }
+            
             Affirmation.isChanged = true
             
             var favoriteAffirmations = UserDefaults.standard.array(forKey: AffirmationStoreKeys.FavoriteAffirmationKey) as? [Int] ?? [Int]()
@@ -40,6 +46,10 @@ class Affirmation {
     
     var isBanned: Bool {
         willSet {
+            guard isBanned != newValue else {
+                return
+            }
+            
             Affirmation.isChanged = true
             
             var bannedAffirmations = UserDefaults.standard.array(forKey: AffirmationStoreKeys.BannedAffirmationsKey) as? [Int] ?? [Int]()
@@ -53,12 +63,17 @@ class Affirmation {
             }
             
             UserDefaults.standard.set(bannedAffirmations, forKey: AffirmationStoreKeys.BannedAffirmationsKey)
+            UserDefaults.standard.removeObject(forKey: AffirmationStoreKeys.LastSeenAffirmationData)
             UserDefaults.standard.synchronize()
         }
     }
     
     var isSeen: Bool {
         willSet {
+            guard isSeen != newValue else {
+                return
+            }
+            
             Affirmation.isChanged = true
             
             var seenAffirmations = UserDefaults.standard.array(forKey: AffirmationStoreKeys.SeenAffirmationKey) as? [Int] ?? [Int]()
@@ -83,7 +98,27 @@ class Affirmation {
         self.isBanned   = isBanned
         self.isSeen     = isSeen
     }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        let id = aDecoder.decodeInteger(forKey: "id")
+        let clause = aDecoder.decodeObject(forKey: "clause") as! String
+        let isFavorite = aDecoder.decodeBool(forKey: "isFavorite")
+        let isBanned = aDecoder.decodeBool(forKey: "isBanned")
+        let isSeen = aDecoder.decodeBool(forKey: "isSeen")
+        
+        self.init(id: id, clause: clause, isFavorite: isFavorite, isBanned: isBanned, isSeen: isSeen)
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(id, forKey: "id")
+        aCoder.encode(clause, forKey: "clause")
+        aCoder.encode(isFavorite, forKey: "isFavorite")
+        aCoder.encode(isBanned, forKey: "isBanned")
+        aCoder.encode(isSeen, forKey: "isSeen")
+    }
+    
 }
+
 
 extension Affirmation {
     static fileprivate var shared: [Affirmation]?
@@ -130,20 +165,11 @@ extension Affirmation {
     }
 
     // Affirmations that can be shown
-    class private func validAffirmations() -> [Affirmation] {
+    static private func validAffirmations() -> [Affirmation] {
         var affirmations = getAffirmations()
         
-        let isAllBanned = affirmations.reduce(true, {$0 && $1.isBanned })
-        let isAllSeen   = affirmations.reduce(true, {$0 && $1.isSeen })
-        
-        if isAllSeen {
-            print("All clauses are seen!!!")
-            
-            // TODO show message to notify user
-            UserDefaults.standard.removeObject(forKey: AffirmationStoreKeys.SeenAffirmationKey)
-            
-            affirmations = getAffirmations(shouldUpdate: true)
-        } else if isAllBanned {
+        affirmations = affirmations.filter{ !$0.isBanned }
+        if affirmations.count == 0 {
             print("All clauses are banned!!!")
             
             // TODO show message to notify user
@@ -152,20 +178,53 @@ extension Affirmation {
             affirmations = getAffirmations(shouldUpdate: true)
         }
         
-        return affirmations.filter{
-            return !$0.isBanned && !$0.isSeen
+        affirmations = affirmations.filter{ !$0.isSeen }
+        if affirmations.count == 0 {
+            print("All clauses are seen!!!")
+            
+            // TODO show message to notify user
+            UserDefaults.standard.removeObject(forKey: AffirmationStoreKeys.SeenAffirmationKey)
+            
+            affirmations = getAffirmations(shouldUpdate: true)
         }
+        
+        return affirmations
     }
     
-    class public func randomAffirmation() -> Affirmation {
-        let affirmations = validAffirmations()
+    static private func storeLastAffirmation(_ affirmation: Affirmation) {
+        let affirmationData = NSKeyedArchiver.archivedData(withRootObject: affirmation)
         
-        return affirmations.randomItem
+        UserDefaults.standard.set(affirmationData, forKey: AffirmationStoreKeys.LastSeenAffirmationData)
+        
+        UserDefaults.standard.set(Date(), forKey: AffirmationStoreKeys.LastLaunchDate)
+        
+        UserDefaults.standard.synchronize()
     }
     
-    class public func favoriteAffirmations() -> [Affirmation] {
+    static private func random() -> Affirmation {
         let affirmations = validAffirmations()
         
-        return affirmations.filter { $0.isFavorite }
+        let randomAffirmation = affirmations.randomItem
+        
+        storeLastAffirmation(randomAffirmation)
+        
+        return randomAffirmation
+    }
+    
+    class public var favorites: [Affirmation] {
+        let affirmations = getAffirmations()
+        
+        return affirmations.filter { $0.isFavorite && !$0.isBanned }
+    }
+    
+    class public func daily() -> Affirmation {
+        if let previousdate = UserDefaults.standard.object(forKey: AffirmationStoreKeys.LastLaunchDate) as? Date, previousdate.isInToday,
+           let affirmationData = UserDefaults.standard.data(forKey: AffirmationStoreKeys.LastSeenAffirmationData),
+           let affirmation = NSKeyedUnarchiver.unarchiveObject(with: affirmationData) as? Affirmation {
+            
+            return affirmation
+        }
+        
+        return Affirmation.random()
     }
 }

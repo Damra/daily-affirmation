@@ -59,7 +59,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
+
+
+
+extension AppDelegate {
     
+    // MARK: -Notification Operations
     class func setDailyNotifications(hour: Int, minute: Int) {
         if #available(iOS 10, *) {
             let center = UNUserNotificationCenter.current()
@@ -119,4 +125,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
-
