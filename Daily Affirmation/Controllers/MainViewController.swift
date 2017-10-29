@@ -40,6 +40,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        button.layer.cornerRadius = button.frame.size.width / 2.0
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         tap.numberOfTapsRequired = 2
         button.addGestureRecognizer(tap)
@@ -54,15 +56,15 @@ class MainViewController: UIViewController {
         reportButton.isHidden = true
         
         // Checking default setting for text to speech.
-        speechEnabled = !UserDefaults.standard.bool(forKey: "textToSpeechDisabled")
+        speechEnabled = Options.shared.isTextToSpeechEnabled
         
         dailyAffirmation = Affirmation.daily()
         
-        let localLang = NSLocale.preferredLanguages[0]
+        let localLanguage = NSLocale.preferredLanguages[0]
         
-        if localLang.firstCharacter! == "t" {
+        if localLanguage.start(with: "tr") {
             speech.voice = AVSpeechSynthesisVoice(language: "tr-US")
-            speech.rate = 0.48
+            speech.rate = 0.45
         } else {
             speech.voice = AVSpeechSynthesisVoice(language: "en-IE")
             speech.rate = 0.39

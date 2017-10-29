@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Before" translatesAutoresizingMaskIntoConstraints="NO" id="Cy7-pd-WQK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="After" translatesAutoresizingMaskIntoConstraints="NO" id="FM5-4m-k4a">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -160,7 +160,7 @@
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="leading" secondItem="wYi-B0-AqR" secondAttribute="trailing" constant="8" id="cQX-98-Srn"/>
                             <constraint firstItem="XO4-hT-jbh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="dQZ-Al-lSo"/>
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="top" secondItem="SdA-GT-hVk" secondAttribute="bottom" constant="40" id="dXy-it-gdD"/>
-                            <constraint firstAttribute="bottom" secondItem="Cy7-pd-WQK" secondAttribute="bottom" constant="-53" id="fSZ-7g-Kw5"/>
+                            <constraint firstAttribute="bottom" secondItem="Cy7-pd-WQK" secondAttribute="bottom" id="fSZ-7g-Kw5"/>
                             <constraint firstItem="qNN-Hj-0UB" firstAttribute="centerY" secondItem="SdA-GT-hVk" secondAttribute="centerY" id="fTa-Eh-3fB"/>
                             <constraint firstAttribute="trailing" secondItem="cZN-Fm-oWa" secondAttribute="trailing" constant="8" id="le2-hm-TWV"/>
                             <constraint firstItem="IAt-PT-qw6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2/5" id="mei-QB-LZf"/>
@@ -319,14 +319,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdU-hg-0Rc">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eE-ly-uPV">
-                                        <rect key="frame" x="156" y="7.5" width="64" height="30.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eE-ly-uPV">
+                                        <rect key="frame" x="141.5" y="7.5" width="93" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDm-Yo-Nty">
-                                        <rect key="frame" x="8" y="0.0" width="132" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="117.5" height="44"/>
                                         <state key="normal" image="Back"/>
                                         <connections>
                                             <action selector="backButtonClicked:" destination="FZz-45-jiC" eventType="touchUpInside" id="eb6-eh-8k0"/>
@@ -658,7 +658,7 @@
     <resources>
         <image name="After" width="418" height="550"/>
         <image name="Back" width="18" height="30"/>
-        <image name="Before" width="1280" height="720"/>
+        <image name="Before" width="360" height="640"/>
         <image name="Button" width="142" height="142"/>
         <image name="Change" width="128" height="128"/>
         <image name="HeartBig" width="512" height="512"/>

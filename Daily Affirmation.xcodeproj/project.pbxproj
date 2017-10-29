@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0381E4BC9D200286AC3 /* Localizable.strings */; };
 		2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0421E4CCDA700286AC3 /* InfoPlist.strings */; };
+		2723146E1FA4B482001D4216 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723146D1FA4B482001D4216 /* Options.swift */; };
 		27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */; };
 		27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */; };
 		276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */; };
@@ -23,7 +24,6 @@
 		27C7F3B51E47C81B003DEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B31E47C81B003DEFB2 /* Main.storyboard */; };
 		27C7F3B71E47C81B003DEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */; };
 		27C7F3BA1E47C81B003DEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */; };
-		27C7F3C51E47D375003DEFB2 /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F3C41E47D375003DEFB2 /* Affirmations.swift */; };
 		27EEF2A51E4CD4AC00FD463A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27EEF2A41E4CD4AC00FD463A /* Info.plist */; };
 		ACC315AF77FB676BD8F1A835 /* Pods_Daily_Affirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A252E5EBA2E434B34B5417 /* Pods_Daily_Affirmation.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +33,8 @@
 		2719E0391E4BC9D500286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2719E0411E4CCDA700286AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2719E0431E4CCDAC00286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2723146D1FA4B482001D4216 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		272314781FA4CB62001D4216 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		27505DDD1E71A61F008C4715 /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 		27C7F3B41E47C81B003DEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27C7F3B91E47C81B003DEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		27C7F3C41E47D375003DEFB2 /* Affirmations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
 		27EEF2A41E4CD4AC00FD463A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F5B0951E485ED400599FA9 /* Daily Affirmation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily Affirmation.entitlements"; sourceTree = "<group>"; };
 		7460D23D5B50912CADCA6EA9 /* Pods-Daily Affirmation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Affirmation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				27C7F3B61E47C81B003DEFB2 /* Assets.xcassets */,
-				27C7F3C41E47D375003DEFB2 /* Affirmations.swift */,
 				2719E0381E4BC9D200286AC3 /* Localizable.strings */,
 				27AFD76D1F9D1DDA006DA81B /* Affirmations.plist */,
 			);
@@ -149,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				27AFD7671F9D1711006DA81B /* Affirmation.swift */,
+				2723146D1FA4B482001D4216 /* Options.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,7 +232,7 @@
 					27C7F3AB1E47C81A003DEFB2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = NG2H4EFXTS;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -350,13 +351,13 @@
 			files = (
 				27AFD7681F9D1711006DA81B /* Affirmation.swift in Sources */,
 				276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */,
-				27C7F3C51E47D375003DEFB2 /* Affirmations.swift in Sources */,
 				27AFD75D1F9BB715006DA81B /* SettingsViewController.swift in Sources */,
 				27AFD75F1F9BB715006DA81B /* MainViewController.swift in Sources */,
 				27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */,
 				27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */,
 				27AFD75E1F9BB715006DA81B /* FavoritesTableViewController.swift in Sources */,
 				27C7F3B01E47C81B003DEFB2 /* AppDelegate.swift in Sources */,
+				2723146E1FA4B482001D4216 /* Options.swift in Sources */,
 				27AFD7601F9BB715006DA81B /* ReportAffirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +405,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				27C7F3B91E47C81B003DEFB2 /* Base */,
+				272314781FA4CB62001D4216 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -452,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -497,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -516,9 +518,9 @@
 				CODE_SIGN_ENTITLEMENTS = "Daily Affirmation/Daily Affirmation.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Efe Helvaci (TBHQQ6MRF4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NG2H4EFXTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +529,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -540,9 +543,9 @@
 				CODE_SIGN_ENTITLEMENTS = "Daily Affirmation/Daily Affirmation.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Efe Helvaci (NG2H4EFXTS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NG2H4EFXTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,6 +553,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

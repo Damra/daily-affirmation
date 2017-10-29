@@ -15,19 +15,42 @@ class SettingsTableViewCell: UITableViewCell {
     @IBOutlet var icon: UIImageView!
     @IBOutlet var onOffSwitch: UISwitch!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    var action: SettingsAction!
+    var settingsItem: SettingsItem! {
+        willSet{
+            switch newValue! {
+            case .Basic(let action, let primaryText, let secondaryText, let icon):
+                secondLabel.isHidden = false
+                onOffSwitch.isHidden = true
+                
+                self.action = action
+                self.mainLabel.text = primaryText
+                self.secondLabel.text = secondaryText
+                self.icon.image = icon
+                
+                break
+            case .Switch(let action, let primaryText, let switchInitialStatus, let icon):
+                secondLabel.isHidden = true
+                onOffSwitch.isHidden = false
+                
+                self.action = action
+                self.mainLabel.text = primaryText
+                self.onOffSwitch.isOn = switchInitialStatus
+                self.icon.image = icon
+                
+                break
+            }
+        }
     }
 
     @IBAction func switchValueChanged(_ sender: Any) {
-        if !UserDefaults.standard.bool(forKey: "textToSpeechSet") {
-            UserDefaults.standard.set(true, forKey: "textToSpeechSet")
+
+        switch action! {
+        case .AccessibilityTextToSpeech :
+            Options.setTextToSpeech(onOffSwitch.isOn)
+            break
+        default:
+            break
         }
-        
-        UserDefaults.standard.set(!onOffSwitch.isOn, forKey: "textToSpeechDisabled")
     }
 }

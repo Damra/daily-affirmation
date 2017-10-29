@@ -22,15 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1014468065824783~7402067556")
         
-        var notificationHour = UserDefaults.standard.integer(forKey: "notificationHour")
-        var notificationMinute = UserDefaults.standard.integer(forKey: "notificationMinute")
-        
-        if !UserDefaults.standard.bool(forKey: "notificationTimeManuallySet") {
-            notificationHour = 7
-            notificationMinute = 0
-        }
-        
-        AppDelegate.setDailyNotifications(hour: notificationHour, minute: notificationMinute)
+        AppDelegate.setDailyNotifications(hour: Options.shared.notificationTime.hour,
+                                          minute: Options.shared.notificationTime.minute)
 
         application.applicationIconBadgeNumber = 1
         
@@ -53,7 +46,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if #available(iOS 10, *) {
+            let center = UNUserNotificationCenter.current()
+            
+            center.getNotificationSettings(completionHandler: {settings in
+                switch settings.authorizationStatus {
+                case .authorized:
+                    Options.setNotificationPermission(.Authorized)
+                    break
+                case .denied:
+                    Options.setNotificationPermission(.NotAuthorized)
+                    break
+                case .notDetermined:
+                    Options.setNotificationPermission(.NotDetermined)
+                    break
+                }
+            })
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
