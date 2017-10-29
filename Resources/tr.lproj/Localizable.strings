@@ -11,6 +11,16 @@
 
 "NotificationSetToast" = "Bildirim saatiniz ayarlandı!";
 
+"BeforePushNotificationTitle" = "Olumlamanı beğendin mi?";
+"BeforePushNotificationDescription" = "Her olumlamadan sonra sormayacağız merak etme :)";
+"BeforePushNotificationApproveAction" = "Beğendim!";
+"BeforePushNotificationCancelAction" = "Maalesef, belki bir sonrakini";
+
+"PushNotificationsTitle" = "Bildirimler";
+"PushNotificationsMessage" = "Güne güzel bir olumlama ile başlamak ister misin? Eğer öyleyse bildirimlere izin ver. Merak etme sonradan vazgeçersen ayarlarına girip değiştirebilirsin.";
+"PushNotificationsApproveAction" = "Bildirimlere İzin Ver";
+"PushNotificationsCancelAction" = "Şimdi değil";
+
 "HailMessage" = "Bugün ne gelmiş bakalım!";
 "HailMorning" = "Günaydın!";
 "HailAfternoon" = "Tünaydın!";

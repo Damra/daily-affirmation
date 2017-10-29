@@ -57,21 +57,12 @@ struct Options {
         }
     }
     
-    var notificationPermissionStatus: NotificationPermissionStatus? {
-        didSet {
-            NotificationCenter.default.post(name: Notification.Name.OptionsUpdate, object: nil)
-        }
-    }
+    var notificationPermissionStatus: NotificationPermissionStatus?
 }
 
 extension Options {
-    static private var sharedInstance: Options!
-    
-    static public var shared: Options {
-        if let _ = sharedInstance {
-            return sharedInstance
-        }
         
+    static public var shared: Options = {        
         let didNotificationTimeManuallySet = UserDefaults.standard.bool(forKey: OptionsStoreKeys.DidNotificationTimeManuallySet)
         
         var notificationTime: NotificationTime
@@ -90,26 +81,20 @@ extension Options {
                               isTextToSpeechEnabled: isTextToSpeechEnabled,
                               notificationPermissionStatus: nil)
         
-        Options.sharedInstance = options
-        
         return options
-    }
+    }()
     
     static public func setNotificationTime(_ time: NotificationTime) {
-        Options.sharedInstance = shared
-        
-        Options.sharedInstance.notificationTime = time
+        Options.shared.notificationTime = time
     }
     
-    static public func setNotificationPermission(_ status: NotificationPermissionStatus) {
-        Options.sharedInstance = shared
+    static public func setNotificationPermission(_ permisson: NotificationPermissionStatus) {
+        Options.shared.notificationPermissionStatus = permisson
         
-        Options.sharedInstance.notificationPermissionStatus = status
+        NotificationCenter.default.post(name: Notification.Name.OptionsUpdate, object: nil)
     }
     
     static public func setTextToSpeech(_ isEnabled: Bool) {
-        Options.sharedInstance = shared
-        
-        Options.sharedInstance.isTextToSpeechEnabled = isEnabled
+        Options.shared.isTextToSpeechEnabled = isEnabled
     }
 }

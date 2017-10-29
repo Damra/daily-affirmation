@@ -180,7 +180,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 break
             case .NotificationPermission:
-                if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                if Options.shared.notificationPermissionStatus == .NotDetermined {
+                    Bulletin.generateNotificationBulletin(shouldAskLikeFirst: false).presentBulletin(above: self)
+                } else if let url = URL(string: UIApplicationOpenSettingsURLString) {
                     UIApplication.shared.openURL(url)
                 }
                 

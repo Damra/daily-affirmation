@@ -12,6 +12,7 @@
 		2723146E1FA4B482001D4216 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723146D1FA4B482001D4216 /* Options.swift */; };
 		27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */; };
 		27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */; };
+		275AB6181FA611EC0018F0AE /* Bulletin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275AB6171FA611EC0018F0AE /* Bulletin.swift */; };
 		276E2F581E50C1C9006450E6 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */; };
 		27AFD7501F9BB4B2006DA81B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27AFD74F1F9BB4B2006DA81B /* GoogleService-Info.plist */; };
 		27AFD75D1F9BB715006DA81B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFD7591F9BB714006DA81B /* SettingsViewController.swift */; };
@@ -38,6 +39,7 @@
 		27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		27505DDD1E71A61F008C4715 /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
+		275AB6171FA611EC0018F0AE /* Bulletin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulletin.swift; sourceTree = "<group>"; };
 		276E2F571E50C1C9006450E6 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		27AFD74F1F9BB4B2006DA81B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27AFD7591F9BB714006DA81B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				27AFD7581F9BB6EA006DA81B /* Cells */,
+				275AB6171FA611EC0018F0AE /* Bulletin.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,18 +327,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Daily Affirmation/Pods-Daily Affirmation-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
+				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BulletinBoard.framework",
 				"${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TBEmptyDataSet/TBEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BulletinBoard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TBEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -354,6 +361,7 @@
 				27AFD75D1F9BB715006DA81B /* SettingsViewController.swift in Sources */,
 				27AFD75F1F9BB715006DA81B /* MainViewController.swift in Sources */,
 				27434AE41E510E1400E0EDD3 /* SettingsTableViewCell.swift in Sources */,
+				275AB6181FA611EC0018F0AE /* Bulletin.swift in Sources */,
 				27505DDA1E7164F3008C4715 /* ReportTableViewCell.swift in Sources */,
 				27AFD75E1F9BB715006DA81B /* FavoritesTableViewController.swift in Sources */,
 				27C7F3B01E47C81B003DEFB2 /* AppDelegate.swift in Sources */,
@@ -520,7 +528,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = NG2H4EFXTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +536,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -545,14 +553,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = NG2H4EFXTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

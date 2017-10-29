@@ -18,12 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
+        FirebaseApp.configure()
         
-        FIRApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1014468065824783~7402067556")
-        
-        AppDelegate.setDailyNotifications(hour: Options.shared.notificationTime.hour,
-                                          minute: Options.shared.notificationTime.minute)
 
         application.applicationIconBadgeNumber = 1
         
@@ -33,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppDelegate.checkNotificationPermissionStatus()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -45,27 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        
-        if #available(iOS 10, *) {
-            let center = UNUserNotificationCenter.current()
-            
-            center.getNotificationSettings(completionHandler: {settings in
-                switch settings.authorizationStatus {
-                case .authorized:
-                    Options.setNotificationPermission(.Authorized)
-                    break
-                case .denied:
-                    Options.setNotificationPermission(.NotAuthorized)
-                    break
-                case .notDetermined:
-                    Options.setNotificationPermission(.NotDetermined)
-                    break
-                }
-            })
-        }
-    }
-
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
@@ -76,6 +58,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     // MARK: -Notification Operations
+    class func checkNotificationPermissionStatus() {
+        if #available(iOS 10, *) {
+            let center = UNUserNotificationCenter.current()
+            
+            center.getNotificationSettings(completionHandler: {settings in
+                switch settings.authorizationStatus {
+                case .authorized:
+                    DispatchQueue.main.async {
+                        Options.setNotificationPermission(.Authorized)
+                    }
+                    break
+                case .denied:
+                    DispatchQueue.main.async {
+                        Options.setNotificationPermission(.NotAuthorized)
+                    }
+                    break
+                case .notDetermined:
+                    DispatchQueue.main.async {
+                        Options.setNotificationPermission(.NotDetermined)
+                    }
+                    break
+                }
+                
+                return
+            })
+        }
+    }
+    
     class func setDailyNotifications(hour: Int, minute: Int) {
         if #available(iOS 10, *) {
             let center = UNUserNotificationCenter.current()
@@ -85,6 +95,8 @@ extension AppDelegate {
                 guard granted == true else {
                     return
                 }
+                
+                Options.setNotificationPermission(.Authorized)
                 
                 let content = UNMutableNotificationContent()
                 content.title = NSLocalizedString("NotificationTitle", comment: "NotifTitle")

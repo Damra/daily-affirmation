@@ -12,6 +12,7 @@ import FTIndicator
 import Async
 import AVFoundation
 import Firebase
+import BulletinBoard
 
 class MainViewController: UIViewController {
 
@@ -35,7 +36,7 @@ class MainViewController: UIViewController {
     
     var speech : AVSpeechUtterance!
     let synthesizer = AVSpeechSynthesizer()
-    var speechEnabled : Bool = true
+    var isAffirmationSuccessfullyShown = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,25 +56,20 @@ class MainViewController: UIViewController {
         // Report button will be shown after affirmation has been seen.
         reportButton.isHidden = true
         
-        // Checking default setting for text to speech.
-        speechEnabled = Options.shared.isTextToSpeechEnabled
-        
         dailyAffirmation = Affirmation.daily()
         
         let localLanguage = NSLocale.preferredLanguages[0]
         
-        if localLanguage.start(with: "tr") {
+        if localLanguage.starts(with: "tr") {
             speech.voice = AVSpeechSynthesisVoice(language: "tr-US")
             speech.rate = 0.45
         } else {
             speech.voice = AVSpeechSynthesisVoice(language: "en-IE")
             speech.rate = 0.39
-            
         }
         
         if !UserDefaults.standard.bool(forKey: "didShowInstruction") {
             instructionLabel.isHidden = false
-            UserDefaults.standard.set(true, forKey: "didShowInstruction")
         }
     }
 
@@ -128,7 +124,7 @@ class MainViewController: UIViewController {
     
     func showAffirmation() {
         
-        if speechEnabled {
+        if Options.shared.isTextToSpeechEnabled {
             Async.main(after: 1, {
                 if !self.synthesizer.isSpeaking && self.affirmationLabel.alpha != 0 {
                     self.synthesizer.speak(self.speech)
@@ -144,13 +140,18 @@ class MainViewController: UIViewController {
             self.afterImage.alpha = 1.0
             self.affirmationLabel.alpha = 1.0
             self.instructionLabel.alpha = 0
-        }, completion: { _ in
-            if self.reportButton.isHidden {
-                self.reportButton.isHidden = false
-                self.reportButton.shake()
+        }, completion: { (success: Bool) in
+            if success && self.affirmationLabel.alpha >= 1.0 {
+                if self.reportButton.isHidden {
+                    self.reportButton.isHidden = false
+                    self.reportButton.shake()
+                }
+                
+                self.instructionLabel.isHidden = true
+                UserDefaults.standard.set(true, forKey: "didShowInstruction")
+                
+                self.isAffirmationSuccessfullyShown = true
             }
-            
-            self.instructionLabel.isHidden = true
         })
     }
     
@@ -163,10 +164,14 @@ class MainViewController: UIViewController {
             self.beforeImage.alpha = 1
             self.afterImage.alpha = 0
             self.affirmationLabel.alpha = 0
-        }, completion: nil)
+        }, completion: { (success: Bool) in
+            if success && self.isAffirmationSuccessfullyShown {
+                self.checkNotification()
+            }
+        })
     }
     
-    func doubleTapped() {
+    @objc func doubleTapped() {
         dailyAffirmation.isFavorite = true
         
         self.heart.alpha = 1.0
@@ -206,6 +211,14 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    @objc func checkNotification() {        
+        if let notificationStatus = Options.shared.notificationPermissionStatus, notificationStatus == .NotDetermined {
+            DispatchQueue.main.async {
+                Bulletin.generateNotificationBulletin(shouldAskLikeFirst: true).presentBulletin(above: self)
+            }
+        }
+    }
 }
 
 extension MainViewController: UIPopoverPresentationControllerDelegate {
@@ -216,10 +229,10 @@ extension MainViewController: UIPopoverPresentationControllerDelegate {
 
 extension MainViewController: ReportAffirmationDelegate {
     func reportAffirmation(withCause cause: String) {
-        FIRAnalytics.logEvent(withName: "report", parameters: [ "affirmation" : dailyAffirmation.clause as NSObject,
-                                                                "cause" : cause as NSObject,
-                                                                "affirmation_id": dailyAffirmation.id as NSObject])
-        
+        Analytics.logEvent("report", parameters: [ "affirmation" : dailyAffirmation.clause,
+                                                   "cause" : cause,
+                                                   "affirmation_id": dailyAffirmation.id])
+
         dailyAffirmation.isBanned = true
         
         dailyAffirmation = Affirmation.daily()
