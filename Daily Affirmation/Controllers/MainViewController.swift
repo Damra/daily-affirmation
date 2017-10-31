@@ -150,6 +150,8 @@ class MainViewController: UIViewController {
                 self.instructionLabel.isHidden = true
                 UserDefaults.standard.set(true, forKey: "didShowInstruction")
                 
+                Options.increaseApplicationLaunchCount()
+                
                 self.isAffirmationSuccessfullyShown = true
             }
         })

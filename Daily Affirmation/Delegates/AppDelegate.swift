@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import UserNotifications
 import FTIndicator
+import StoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1014468065824783~7402067556")
 
         application.applicationIconBadgeNumber = 1
+        
+        if #available(iOS 10.3, *), Options.shouldDisplayRatePrompt() {
+            SKStoreReviewController.requestReview()
+        }
         
         return true
     }

@@ -8,6 +8,8 @@
 
 import Foundation
 
+fileprivate let defaults = UserDefaults.standard
+
 extension Notification.Name {
     static let OptionsUpdate = Notification.Name("OptionsUpdate")
 }
@@ -35,17 +37,18 @@ struct Options {
         static let NotificationHour = "notificationHour"
         static let NotificationMinute = "notificationMinute"
         static let IsTextToSpeechDisabled = "textToSpeechDisabled"
+        static let ApplicationLaunchCount = "ApplicationLaunchCount"
     }
     
     var notificationTime: NotificationTime {
         didSet {
-            UserDefaults.standard.set(true, forKey: OptionsStoreKeys.DidNotificationTimeManuallySet)
+            defaults.set(true, forKey: OptionsStoreKeys.DidNotificationTimeManuallySet)
             
-            UserDefaults.standard.set(notificationTime.hour, forKey: OptionsStoreKeys.NotificationHour)
+            defaults.set(notificationTime.hour, forKey: OptionsStoreKeys.NotificationHour)
             
-            UserDefaults.standard.set(notificationTime.minute, forKey: OptionsStoreKeys.NotificationMinute)
+            defaults.set(notificationTime.minute, forKey: OptionsStoreKeys.NotificationMinute)
             
-            UserDefaults.standard.synchronize()
+            defaults.synchronize()
             
             AppDelegate.setDailyNotifications(hour: notificationTime.hour, minute: notificationTime.minute)
         }
@@ -53,33 +56,42 @@ struct Options {
     
     var isTextToSpeechEnabled: Bool {
         didSet {
-            UserDefaults.standard.set(!isTextToSpeechEnabled, forKey: OptionsStoreKeys.IsTextToSpeechDisabled)
+            defaults.set(!isTextToSpeechEnabled, forKey: OptionsStoreKeys.IsTextToSpeechDisabled)
         }
     }
     
     var notificationPermissionStatus: NotificationPermissionStatus?
+    
+    var applicationLaunchCount: Int {
+        didSet {
+            defaults.set(applicationLaunchCount, forKey: OptionsStoreKeys.ApplicationLaunchCount)
+        }
+    }
 }
 
 extension Options {
         
-    static public var shared: Options = {        
-        let didNotificationTimeManuallySet = UserDefaults.standard.bool(forKey: OptionsStoreKeys.DidNotificationTimeManuallySet)
+    static public var shared: Options = {
+        let didNotificationTimeManuallySet = defaults.bool(forKey: OptionsStoreKeys.DidNotificationTimeManuallySet)
         
         var notificationTime: NotificationTime
         if didNotificationTimeManuallySet {
-            let notificationHour = UserDefaults.standard.integer(forKey: OptionsStoreKeys.NotificationHour)
-            let notificationMinute = UserDefaults.standard.integer(forKey: OptionsStoreKeys.NotificationMinute)
+            let notificationHour = defaults.integer(forKey: OptionsStoreKeys.NotificationHour)
+            let notificationMinute = defaults.integer(forKey: OptionsStoreKeys.NotificationMinute)
             
             notificationTime = NotificationTime(hour: notificationHour, minute: notificationMinute)
         } else {
             notificationTime = NotificationTime()
         }
         
-        let isTextToSpeechEnabled = !UserDefaults.standard.bool(forKey: OptionsStoreKeys.IsTextToSpeechDisabled)
+        let isTextToSpeechEnabled = !defaults.bool(forKey: OptionsStoreKeys.IsTextToSpeechDisabled)
+        
+        let applicationLaunchCount = defaults.integer(forKey: OptionsStoreKeys.ApplicationLaunchCount)
         
         let options = Options(notificationTime: notificationTime,
                               isTextToSpeechEnabled: isTextToSpeechEnabled,
-                              notificationPermissionStatus: nil)
+                              notificationPermissionStatus: nil,
+                              applicationLaunchCount: applicationLaunchCount)
         
         return options
     }()
@@ -96,5 +108,19 @@ extension Options {
     
     static public func setTextToSpeech(_ isEnabled: Bool) {
         Options.shared.isTextToSpeechEnabled = isEnabled
+    }
+    
+    static public func increaseApplicationLaunchCount() {
+        Options.shared.applicationLaunchCount += 1
+    }
+    
+    static public func shouldDisplayRatePrompt() -> Bool {
+        let launchCount = Options.shared.applicationLaunchCount
+        
+        if launchCount == 6 || launchCount == 20 || launchCount % 50 == 0 {
+            return true
+        }
+        
+        return false
     }
 }
