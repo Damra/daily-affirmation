@@ -83,6 +83,18 @@ extension AppDelegate {
                 
                 return
             })
+        } else {  // #available(iOS 8, *)
+            if UserDefaults.standard.bool(forKey: "NotificationPermissionAsked") {
+                if let settings = UIApplication.shared.currentUserNotificationSettings {
+                    if settings.types.intersection([.alert, .badge, .sound]).isEmpty {
+                        Options.setNotificationPermission(.NotAuthorized)
+                    } else {
+                        Options.setNotificationPermission(.Authorized)
+                    }
+                }
+            } else {
+                Options.setNotificationPermission(.NotDetermined)
+            }
         }
     }
     
@@ -144,6 +156,8 @@ extension AppDelegate {
             
             application.cancelAllLocalNotifications()
             application.scheduleLocalNotification(notification)
+            
+            UserDefaults.standard.set(true, forKey: "NotificationPermissionAsked")
         }
     }
 }
