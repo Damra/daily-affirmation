@@ -90,7 +90,7 @@
 		<key>id</key>
 		<integer>14</integer>
 		<key>clause</key>
-		<string>(For those who are unemployed) I deserve to be employed and paid well for my time, efforts, and ideas. Each day, I am closer to finding the perfect job for me.</string>
+		<string>I deserve to be paid well for my time, efforts, and ideas. </string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -162,7 +162,7 @@
 		<key>id</key>
 		<integer>26</integer>
 		<key>clause</key>
-		<string>(For those who are single) The perfect partner for me is coming into my life sooner than I expect.</string>
+		<string>I am attracting the perfect partner by becoming the one.</string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -288,7 +288,7 @@
 		<key>id</key>
 		<integer>47</integer>
 		<key>clause</key>
-		<string>I may be one in 7 billion but I am also one in 7 billion.</string>
+		<string>I may be one in 7 billion but I am also one in 7 billion.I am unique.</string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -948,7 +948,7 @@
 		<key>id</key>
 		<integer>157</integer>
 		<key>clause</key>
-		<string>I get everything I want by first helping others get everything they want.</string>
+		<string>I get everything I want by helping others to get everything they want.</string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -1040,11 +1040,544 @@
 		<key>clause</key>
 		<string>I appreciate all the lessons that owning my business has taught me.</string>
 	</dict>
+    <dict>
+        <key>id</key>
+        <integer>173</integer>
+        <key>clause</key>
+        <string>I am strong and balanced.</string>
+    </dict>
+
 	<dict>
 		<key>id</key>
-		<integer>173</integer>
+		<integer>174</integer>
 		<key>clause</key>
 		<string>Success and growth are inevitable outcomes of my work.</string>
 	</dict>
+    <dict>
+        <key>id</key>
+        <integer>175</integer>
+        <key>clause</key>
+        <string>I am much stronger than any  challenge.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>176</integer>
+        <key>clause</key>
+        <string>My body is healthy; my mind is brilliant; my soul is tranquil.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>177</integer>
+        <key>clause</key>
+        <string>I believe I can do everything.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>178</integer>
+        <key>clause</key>
+        <string>Everything that is happening now is happening for my ultimate good.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>179</integer>
+        <key>clause</key>
+        <string>I am the architect of my life; I build its foundation and choose its contents.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>180</integer>
+        <key>clause</key>
+        <string>I forgive those who have harmed me in my past and peacefully detach from them.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>181</integer>
+        <key>clause</key>
+        <string>My ability to conquer my challenges is limitless; my potential to succeed is infinite</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>182</integer>
+        <key>clause</key>
+        <string>Today, I abandon my old habits and take up new, more positive ones.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>183</integer>
+        <key>clause</key>
+        <string>I will focus on making myself better, not on thinking I am better.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>184</integer>
+        <key>clause</key>
+        <string>Patience is a genuine expression of confidence, acceptance, serenity and faith in my own ability.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>185</integer>
+        <key>clause</key>
+        <string>Patience a sign of strength.  I practice it.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>186</integer>
+        <key>clause</key>
+        <string>I am strong, healthy and full of energy.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>187</integer>
+        <key>clause</key>
+        <string>I am a money magnet.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>188</integer>
+        <key>clause</key>
+        <string>I am the architect of my life. I am the creator of my reality.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>189</integer>
+        <key>clause</key>
+        <string>I accept and love myself just the way I am.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>190</integer>
+        <key>clause</key>
+        <string>I am supported and loved by God</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>191</integer>
+        <key>clause</key>
+        <string>I am surrounded by abundance.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>192</integer>
+        <key>clause</key>
+        <string>I am healthy, energetic and optimistic.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>193</integer>
+        <key>clause</key>
+        <string>I am overflowing with happiness, joy and satisfaction.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>194</integer>
+        <key>clause</key>
+        <string>My body is relaxed. My mind is calm .My soul is at peace.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>195</integer>
+        <key>clause</key>
+        <string>I am able to achieve whatever I desire.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>196</integer>
+        <key>clause</key>
+        <string>I can achieve greatness.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>197</integer>
+        <key>clause</key>
+        <string>Everything happens for a reason. Everything leads to something positive.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>198</integer>
+        <key>clause</key>
+        <string>I am forgiving. My compassion replaces anger with love.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>199</integer>
+        <key>clause</key>
+        <string>I am able to conquer all the challenges I am confronted with.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>200</integer>
+        <key>clause</key>
+        <string>I am becoming more confident and stronger each day.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>201</integer>
+        <key>clause</key>
+        <string>My potential to succeed is infinite.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>202</integer>
+        <key>clause</key>
+        <string>I am becoming more knowledgeable and wiser with each day.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>203</integer>
+        <key>clause</key>
+        <string>I am creative and bursting with brilliant ideas.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>204</integer>
+        <key>clause</key>
+        <string>I am courageous and overcome my fears by confronting them.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>205</integer>
+        <key>clause</key>
+        <string>I am at peace with my past.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>206</integer>
+        <key>clause</key>
+        <string>I radiate love, happiness, grace and positivity.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>207</integer>
+        <key>clause</key>
+        <string>I am patient, diplomatic and tolerant.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>208</integer>
+        <key>clause</key>
+        <string>I am grateful for the wonders in my life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>209</integer>
+        <key>clause</key>
+        <string>The universe supports me in every possible way.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>210</integer>
+        <key>clause</key>
+        <string>Every experience in my life helps me to grow.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>211</integer>
+        <key>clause</key>
+        <string>Today, I lay the foundation for a wonderful future.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>212</integer>
+        <key>clause</key>
+        <string>I am safe and protected by divinity.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>213</integer>
+        <key>clause</key>
+        <string>I speak kindly of others.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>214</integer>
+        <key>clause</key>
+        <string>Everything I seek can be found within.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>215</integer>
+        <key>clause</key>
+        <string>I set myself free by forgiving myself.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>216</integer>
+        <key>clause</key>
+        <string>I am significant. I contribute to the advancement of humankind.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>217</integer>
+        <key>clause</key>
+        <string>I love myself and feel great about myself.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>218</integer>
+        <key>clause</key>
+        <string>I accept myself unconditionally.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>219</integer>
+        <key>clause</key>
+        <string>I see problems as interesting challenges.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>220</integer>
+        <key>clause</key>
+        <string>I radiate confidence.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>221</integer>
+        <key>clause</key>
+        <string>Challenges bring out the best in me.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>222</integer>
+        <key>clause</key>
+        <string>I have confidence in my abilities and skills.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>223</integer>
+        <key>clause</key>
+        <string>I make sound decisions.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>224</integer>
+        <key>clause</key>
+        <string>I am bold and courageous</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>225</integer>
+        <key>clause</key>
+        <string>I face difficulty with courage.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>226</integer>
+        <key>clause</key>
+        <string>I am worthy of happiness and love.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>227</integer>
+        <key>clause</key>
+        <string>My heart is always open. I am kind to every person I meet.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>228</integer>
+        <key>clause</key>
+        <string>I am surrounded by love. I attract kind people.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>229</integer>
+        <key>clause</key>
+        <string> I love unconditionally and without hesitation.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>230</integer>
+        <key>clause</key>
+        <string>I deserve love. I am loved and appreciated by those around me.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>231</integer>
+        <key>clause</key>
+        <string>Everywhere I go, I am accompanied by love.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>232</integer>
+        <key>clause</key>
+        <string>Love, forgiveness and understanding is the very foundation of my relationship.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>233</integer>
+        <key>clause</key>
+        <string>I give and receive love equally.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>234</integer>
+        <key>clause</key>
+        <string>I accept my partner unconditionally.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>235</integer>
+        <key>clause</key>
+        <string>I am treasured for who I really am.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>236</integer>
+        <key>clause</key>
+        <string>My relationships are becoming stronger, deeper and more loving with every day.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>237</integer>
+        <key>clause</key>
+        <string>I can and will have more than I ever dreamed possible.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>238</integer>
+        <key>clause</key>
+        <string>I feel good about money and deserve it in my life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>239</integer>
+        <key>clause</key>
+        <string>Great wealth is flowing to me now.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>240</integer>
+        <key>clause</key>
+        <string>I now create my wonderful, ideal life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>241</integer>
+        <key>clause</key>
+        <string>I now create my wonderful, ideal life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>242</integer>
+        <key>clause</key>
+        <string>I am thankful for the comfort and joy that money provides me.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>243</integer>
+        <key>clause</key>
+        <string>I always have enough money for myself.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>244</integer>
+        <key>clause</key>
+        <string>Every day in every way I am becoming more and more prosperous.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>245</integer>
+        <key>clause</key>
+        <string>I see myself as wealthy, and that’s who I am.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>246</integer>
+        <key>clause</key>
+        <string>I choose wealth and abundance.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>247</integer>
+        <key>clause</key>
+        <string>My wealth derives from honesty in everything I do.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>248</integer>
+        <key>clause</key>
+        <string>I am worthy of great success.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>249</integer>
+        <key>clause</key>
+        <string>My greatest good is coming to me now.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>250</integer>
+        <key>clause</key>
+        <string>I love abundance in all its beautiful forms.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>251</integer>
+        <key>clause</key>
+        <string>I am wide awake to my abundance.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>252</integer>
+        <key>clause</key>
+        <string>I release all my negative beliefs about money and invite wealth into my life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>253</integer>
+        <key>clause</key>
+        <string>I am prosperous, healthy, happy and live in abundance.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>254</integer>
+        <key>clause</key>
+        <string>Wealth is my birth-right, my natural state of being.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>255</integer>
+        <key>clause</key>
+        <string>Making money is good for me and for everyone in my life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>256</integer>
+        <key>clause</key>
+        <string>Making money is good for me and for everyone in my life.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>257</integer>
+        <key>clause</key>
+        <string>My income is growing higher and higher now.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>258</integer>
+        <key>clause</key>
+        <string>Money is an important part of my life and is never away from me.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>259</integer>
+        <key>clause</key>
+        <string>Money is an important part of my life and is never away from me.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>260</integer>
+        <key>clause</key>
+        <string>All my issues with wealth have disappeared.</string>
+    </dict>
+
+
+
+
+
+
+
+
+
+    
 </array>
 </plist>
