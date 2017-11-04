@@ -147,12 +147,16 @@ class MainViewController: UIViewController {
                     self.reportButton.shake()
                 }
                 
-                self.instructionLabel.isHidden = true
-                UserDefaults.standard.set(true, forKey: "didShowInstruction")
-                
-                Options.increaseApplicationLaunchCount()
-                
-                self.isAffirmationSuccessfullyShown = true
+                if self.isAffirmationSuccessfullyShown == false {
+                    Options.increaseApplicationLaunchCount()
+                    
+                    self.isAffirmationSuccessfullyShown = true
+                    
+                    if self.instructionLabel.isHidden == false {
+                        self.instructionLabel.isHidden = true
+                        UserDefaults.standard.set(true, forKey: "didShowInstruction")
+                    }
+                }
             }
         })
     }
@@ -163,9 +167,10 @@ class MainViewController: UIViewController {
         }
         
         UIView.animate(withDuration: 2, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
-            self.beforeImage.alpha = 1
+            self.beforeImage.alpha = 1.0
             self.afterImage.alpha = 0
             self.affirmationLabel.alpha = 0
+            self.instructionLabel.alpha = 1.0
         }, completion: { (success: Bool) in
             if success && self.isAffirmationSuccessfullyShown {
                 self.checkNotification()

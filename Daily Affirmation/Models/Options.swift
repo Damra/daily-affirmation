@@ -117,7 +117,7 @@ extension Options {
     static public func shouldDisplayRatePrompt() -> Bool {
         let launchCount = Options.shared.applicationLaunchCount
         
-        if launchCount == 6 || launchCount == 20 || launchCount % 50 == 0 {
+        if launchCount == 6 || launchCount % 20 == 0 {
             return true
         }
         
