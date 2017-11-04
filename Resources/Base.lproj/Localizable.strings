@@ -11,13 +11,13 @@
 
 "NotificationSetToast" = "Notification time is set!";
 
-"BeforePushNotificationTitle" = "Did you like your affirmation?";
+"BeforePushNotificationTitle" = "Like your affirmation?";
 "BeforePushNotificationDescription" = "We are not gonna ask this after every affirmation no worries :)";
 "BeforePushNotificationApproveAction" = "Liked it!";
 "BeforePushNotificationCancelAction" = "Nope, maybe next time";
 
 "PushNotificationsTitle" = "Push Notifications";
-"PushNotificationsMessage" = "Do you want to start your days with a nice affirmation? If so, allow the notifications. Do not worry, if you give up later, you can change your settings.";
+"PushNotificationsMessage" = "Do you want to start your days with nice affirmations? If that's so, allow the notifications. Do not worry, if you give up later, you can change your settings.";
 "PushNotificationsApproveAction" = "Allow Notifications";
 "PushNotificationsCancelAction" = "Not now";
 

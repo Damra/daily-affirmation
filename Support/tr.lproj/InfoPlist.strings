@@ -6,4 +6,5 @@
   Copyright © 2017 efehelvaci. All rights reserved.
 */
 
-"CFBundleDisplayName" = "Günlük Olumlama";
+"CFBundleDisplayName" = "Günlük\U00A0Olumlama";
+"UILaunchStoryboardName" = "LaunchScreen_tr";

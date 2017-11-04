@@ -6,4 +6,5 @@
   Copyright © 2017 efehelvaci. All rights reserved.
 */
 
-"CFBundleDisplayName" = "Daily Affirmation";
+"CFBundleDisplayName" = "Daily\U00A0Affirmation";
+"UILaunchStoryboardName" = "LaunchScreen";

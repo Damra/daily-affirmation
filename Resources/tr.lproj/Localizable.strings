@@ -17,7 +17,7 @@
 "BeforePushNotificationCancelAction" = "Maalesef, belki bir sonrakini";
 
 "PushNotificationsTitle" = "Bildirimler";
-"PushNotificationsMessage" = "Güne güzel bir olumlama ile başlamak ister misin? Eğer öyleyse bildirimlere izin ver. Merak etme sonradan vazgeçersen ayarlarına girip değiştirebilirsin.";
+"PushNotificationsMessage" = "Peki güne güzel bir olumlama ile başlamak ister misin? Eğer öyleyse bildirimlere izin ver. Merak etme sonradan vazgeçersen ayarlarına girip değiştirebilirsin.";
 "PushNotificationsApproveAction" = "Bildirimlere İzin Ver";
 "PushNotificationsCancelAction" = "Şimdi değil";
 

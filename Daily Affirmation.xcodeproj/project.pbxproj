@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27138F841FAE2EC1004D941E /* LaunchScreen_tr.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27138F831FAE2EC1004D941E /* LaunchScreen_tr.storyboard */; };
 		2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0381E4BC9D200286AC3 /* Localizable.strings */; };
 		2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719E0421E4CCDA700286AC3 /* InfoPlist.strings */; };
 		2723146E1FA4B482001D4216 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723146D1FA4B482001D4216 /* Options.swift */; };
@@ -30,12 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27138F831FAE2EC1004D941E /* LaunchScreen_tr.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen_tr.storyboard; sourceTree = "<group>"; };
 		2719E0371E4BC9D200286AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2719E0391E4BC9D500286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2719E0411E4CCDA700286AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2719E0431E4CCDAC00286AC3 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2723146D1FA4B482001D4216 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
-		272314781FA4CB62001D4216 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		27434AE31E510E1400E0EDD3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		27505DD91E7164F3008C4715 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		27505DDD1E71A61F008C4715 /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 			children = (
 				27C7F3B31E47C81B003DEFB2 /* Main.storyboard */,
 				27C7F3B81E47C81B003DEFB2 /* LaunchScreen.storyboard */,
+				27138F831FAE2EC1004D941E /* LaunchScreen_tr.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,7 +240,7 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = NG2H4EFXTS;
 						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -276,6 +278,7 @@
 			files = (
 				2719E0361E4BC9D200286AC3 /* Localizable.strings in Resources */,
 				2719E0401E4CCDA700286AC3 /* InfoPlist.strings in Resources */,
+				27138F841FAE2EC1004D941E /* LaunchScreen_tr.storyboard in Resources */,
 				27AFD7501F9BB4B2006DA81B /* GoogleService-Info.plist in Resources */,
 				27C7F3BA1E47C81B003DEFB2 /* LaunchScreen.storyboard in Resources */,
 				27C7F3B71E47C81B003DEFB2 /* Assets.xcassets in Resources */,
@@ -415,7 +418,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				27C7F3B91E47C81B003DEFB2 /* Base */,
-				272314781FA4CB62001D4216 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -445,6 +447,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -496,7 +499,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -526,16 +530,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Daily Affirmation/Daily Affirmation.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Efe Helvaci (TBHQQ6MRF4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NG2H4EFXTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4c824444-0132-4aab-8bb5-87a8064f4750";
+				PROVISIONING_PROFILE_SPECIFIER = DailyAffirmationDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -551,16 +556,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Daily Affirmation/Daily Affirmation.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Efe Helvaci (NG2H4EFXTS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NG2H4EFXTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.efehelvaci.Daily-Affirmation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "baaff1e9-cde8-4661-b484-6e27ff5598c1";
+				PROVISIONING_PROFILE_SPECIFIER = DailyAffirmation;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
