@@ -10,6 +10,18 @@ import UIKit
 import UserNotifications
 import FTIndicator
 
+enum SettingsAction {
+    case NotificationPermission
+    case NotificationTime
+    case AccessibilityTextToSpeech
+    case RateUs
+}
+
+enum SettingsItem {
+    case Basic(action: SettingsAction, primaryText: String, secondaryText: String?, icon: UIImage?)
+    case Switch(action: SettingsAction, primaryText: String, switchInitialStatus: Bool, icon: UIImage?)
+}
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
@@ -17,73 +29,82 @@ class SettingsViewController: UIViewController {
     @IBOutlet var datePickerView: UIView!
     @IBOutlet var datePickerViewHeight: NSLayoutConstraint!
     
-    var notificationHour = UserDefaults.standard.integer(forKey: "notificationHour") {
-        didSet{
-            UserDefaults.standard.set(notificationHour, forKey: "notificationHour")
-        }
-    }
-    var notificationMinute = UserDefaults.standard.integer(forKey: "notificationMinute"){
-        didSet{
-            UserDefaults.standard.set(notificationMinute, forKey: "notificationMinute")
-        }
-    }
-    var notificationTimeManuallySet = UserDefaults.standard.bool(forKey: "notificationTimeManuallySet")
+    var options = Options.shared
+    
+    fileprivate var settingsItems: [SettingsItem]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if !notificationTimeManuallySet {
-            notificationHour = 7
-            notificationMinute = 0
-            
-            tableView.reloadData()
-        }
         
-        datePicker.date.hour = notificationHour
-        datePicker.date.minute = notificationMinute
-        // Do any additional setup after loading the view.
+        setSettings()
+        
+        datePicker.date.hour = options.notificationTime.hour
+        datePicker.date.minute = options.notificationTime.minute
+        
         tableView.tableFooterView = UIView()
+        tableView.alwaysBounceVertical = false
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(update), name: Notification.Name.OptionsUpdate , object: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func setSettings() {
+        let notificationPermissionStatus = options.notificationPermissionStatus == .Authorized ? NSLocalizedString("On", comment: "") : NSLocalizedString("Off", comment: "")
+        
+        let hour = options.notificationTime.hour < 10 ? "0\(options.notificationTime.hour)" : "\(options.notificationTime.hour)"
+        let minute = options.notificationTime.minute < 10 ? "0\(options.notificationTime.minute)" : "\(options.notificationTime.minute)"
+        
+        let notificationTimeStatus = hour + "." + minute
+        
+        settingsItems = [
+            SettingsItem.Basic(action: .NotificationPermission,
+                               primaryText: NSLocalizedString("SettingsCell1", comment: ""),
+                               secondaryText: notificationPermissionStatus,
+                               icon: UIImage(named: "NotificationSettings")),
+            
+            SettingsItem.Basic(action: .NotificationTime,
+                               primaryText: NSLocalizedString("SettingsCell2", comment: ""),
+                               secondaryText: notificationTimeStatus,
+                               icon: UIImage(named: "TimeSettings")),
+            
+            SettingsItem.Switch(action: .AccessibilityTextToSpeech,
+                                primaryText: NSLocalizedString("TextToSpeech", comment: ""),
+                                switchInitialStatus: options.isTextToSpeechEnabled,
+                                icon: UIImage(named: "Ear")),
+            
+            SettingsItem.Basic(action: .RateUs,
+                               primaryText: NSLocalizedString("SettingsCell3", comment: ""),
+                               secondaryText: nil,
+                               icon: UIImage(named: "RateUsSettings"))
+        ]
     }
 
     @IBAction func backButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.OptionsUpdate, object: nil)
+    }
+    
     @IBAction func setButtonClicked(_ sender: Any) {
-        let indexPath = IndexPath(row: 1, section: 0)
-        let cell = tableView.cellForRow(at: indexPath) as! SettingsTableViewCell
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH.mm"
+        let hour = datePicker.date.hour
+        let minute = datePicker.date.minute
         
-        let dateString = dateFormatter.string(from: datePicker.date)
+        Options.setNotificationTime(NotificationTime(hour: hour, minute: minute))
         
-        cell.secondLabel.text = dateString
-        
-        dateFormatter.dateFormat = "HH"
-        notificationHour = Int(dateFormatter.string(from: datePicker.date))!
-        
-        dateFormatter.dateFormat = "mm"
-        notificationMinute = Int(dateFormatter.string(from: datePicker.date))!
-        
-        AppDelegate.setDailyNotifications(hour: notificationHour, minute: notificationMinute)
-        
-        if !notificationTimeManuallySet {
-            notificationTimeManuallySet = true
-            UserDefaults.standard.set(true, forKey: "notificationTimeManuallySet")
-        }
+        update()
         
         self.datePickerViewHeight.constant = 0
         UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
         })
         
-        FTIndicator.showToastMessage(NSLocalizedString("NotificationSetToast", comment: "notifSetToast"))
+        FTIndicator.showToastMessage(NSLocalizedString("NotificationSetToast", comment: ""))
     }
     
     @IBAction func cancelButtonClicked(_ sender: Any) {
@@ -92,80 +113,42 @@ class SettingsViewController: UIViewController {
             self.view.layoutIfNeeded()
         })
     }
+    
+    @objc func update() {
+        DispatchQueue.main.async {
+            self.options = Options.shared
+            self.setSettings()
+            
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") as? SettingsTableViewCell {
-            
-            if indexPath.section == 0 {
-                if indexPath.row == 0 {
-                    cell.mainLabel.text = NSLocalizedString("SettingsCell1", comment: "setCell1")
-                    cell.icon.image = UIImage(named: "NotificationSettings")
-                    
-                    cell.secondLabel.text = ""
-                    cell.secondLabel.alpha = 0.0
-                    cell.onOffSwitch.isHidden = true
-                    
-                    if #available(iOS 10, *) {
-                        let center = UNUserNotificationCenter.current()
-                        
-                        center.getNotificationSettings(completionHandler: {settings in
-                            if settings.authorizationStatus == .authorized {
-                                cell.secondLabel.text = NSLocalizedString("On", comment: "notifOn")
-                                cell.secondLabel.alpha = 1.0
-                            } else {
-                                cell.secondLabel.text = NSLocalizedString("Off", comment: "notifOff")
-                                cell.secondLabel.alpha = 1.0
-                            }
-                        })
-                    }
-                } else if indexPath.row == 1 {
-                    cell.mainLabel.text = NSLocalizedString("SettingsCell2", comment: "setCell2")
-                    cell.icon.image = UIImage(named: "TimeSettings")
-                    
-                    var hour : String
-                    var minute : String
-                    
-                    notificationMinute < 10 ? (minute = "0\(notificationMinute)") : (minute = "\(notificationMinute)")
-                    notificationHour < 10 ? (hour = "0\(notificationHour)") : (hour = "\(notificationHour)")
-                    
-                    cell.secondLabel.text = hour + "." + minute
-                    cell.secondLabel.alpha = 1.0
-                    cell.onOffSwitch.isHidden = true
-                }
-            } else if indexPath.section == 1 {
-                if indexPath.row == 0 {
-                    cell.mainLabel.text = NSLocalizedString("TextToSpeech", comment: "texttospeech")
-                    cell.icon.image = UIImage(named: "Ear")
-                    cell.secondLabel.text = ""
-                    cell.secondLabel.alpha = 0.0
-                    cell.onOffSwitch.isHidden = false
-                    
-                    if UserDefaults.standard.bool(forKey: "textToSpeechSet") {
-                        cell.onOffSwitch.isOn = !UserDefaults.standard.bool(forKey: "textToSpeechDisabled")
-                    }
-                }
-            } else if indexPath.section == 2 {
-                if indexPath.row == 0 {
-                    cell.mainLabel.text = NSLocalizedString("SettingsCell3", comment: "setCell3")
-                    cell.icon.image = UIImage(named: "RateUsSettings")
-                    cell.secondLabel.text = ""
-                    cell.secondLabel.alpha = 0.0
-                    cell.onOffSwitch.isHidden = true
-                }
+            var beforeTotal: Int = 0
+            for i in 0..<indexPath.section {
+                beforeTotal += tableView.numberOfRows(inSection: i)
             }
             
-            return cell
+            cell.settingsItem = settingsItems[beforeTotal + indexPath.row]
             
-        } else {
-            return UITableViewCell()
+            return cell
         }
+        
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {return 2}
-        else {return 1}
+        switch section {
+        case 0:
+            return 2
+        case 1, 2:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -173,27 +156,38 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {return ""}
-        else if section == 1 {return NSLocalizedString("SettingsSection2", comment: "setSect2")}
-        else {return NSLocalizedString("SettingsSection3", comment: "setSect3")}
+        switch section {
+        case 1:
+            return NSLocalizedString("SettingsSection2", comment: "")
+        case 2:
+            return NSLocalizedString("SettingsSection3", comment: "")
+        default:
+            return ""
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                let url = URL(string: UIApplicationOpenSettingsURLString)
-                UIApplication.shared.openURL(url!)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? SettingsTableViewCell,
+           let action = cell.action {
+            
+            switch action {
+            case .AccessibilityTextToSpeech:
+                cell.onOffSwitch.setOn(!cell.onOffSwitch.isOn, animated: true)
+                cell.onOffSwitch.sendActions(for: .valueChanged)
                 
-                let cell = tableView.cellForRow(at: indexPath) as! SettingsTableViewCell
-                cell.secondLabel.text = ""
-                cell.secondLabel.alpha = 0.0
+                break
+            case .NotificationPermission:
+                if Options.shared.notificationPermissionStatus == .NotDetermined {
+                    Bulletin.generateNotificationBulletin(shouldAskLikeFirst: false).presentBulletin(above: self)
+                } else if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                    UIApplication.shared.openURL(url)
+                }
                 
-                self.datePickerViewHeight.constant = 0
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.view.layoutIfNeeded()
-                })
-            } else if indexPath.row == 1 {
+                break
+            case .NotificationTime:
                 if self.datePickerViewHeight.constant == 0 {
                     self.datePickerViewHeight.constant = 200
                     UIView.animate(withDuration: 0.5, animations: {
@@ -205,19 +199,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                         self.view.layoutIfNeeded()
                     })
                 }
+                
+                break
+            case .RateUs:
+                if let url = URL(string: "itms-apps://itunes.apple.com/app/id1202851636") {
+                    UIApplication.shared.openURL(url)
+                }
+                
+                break
             }
-        } else if indexPath.section == 2 {
-            if indexPath.row == 0 {
-                let url = URL(string: "itms-apps://itunes.apple.com/app/id1202851636")
-                UIApplication.shared.openURL(url!)
-            }
-            
-            self.datePickerViewHeight.constant = 0
-            UIView.animate(withDuration: 0.5, animations: {
-                self.view.layoutIfNeeded()
-            })
         }
-        
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

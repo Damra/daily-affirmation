@@ -7,15 +7,14 @@
 //
 
 import Foundation
-import FTIndicator
 
-class Affirmation: NSObject, NSCoding {
+class Affirmation {
     
     struct AffirmationStoreKeys {
         static let BannedAffirmationsKey   = "BannedAffirmations"
         static let FavoriteAffirmationKey  = "FavoriteAffirmations"
         static let SeenAffirmationKey      = "SeenAffirmations"
-        static let LastSeenAffirmationData = "LastSeenAffirmation"
+        static let LastSeenAffirmationID   = "LastSeenAffirmationID"
         static let LastLaunchDate          = "LastLaunchDate"
     }
     
@@ -45,11 +44,7 @@ class Affirmation: NSObject, NSCoding {
     }
     
     var isBanned: Bool {
-        willSet {
-            guard isBanned != newValue else {
-                return
-            }
-            
+        willSet {            
             Affirmation.isChanged = true
             
             var bannedAffirmations = UserDefaults.standard.array(forKey: AffirmationStoreKeys.BannedAffirmationsKey) as? [Int] ?? [Int]()
@@ -63,7 +58,7 @@ class Affirmation: NSObject, NSCoding {
             }
             
             UserDefaults.standard.set(bannedAffirmations, forKey: AffirmationStoreKeys.BannedAffirmationsKey)
-            UserDefaults.standard.removeObject(forKey: AffirmationStoreKeys.LastSeenAffirmationData)
+            UserDefaults.standard.removeObject(forKey: AffirmationStoreKeys.LastLaunchDate)
             UserDefaults.standard.synchronize()
         }
     }
@@ -98,25 +93,6 @@ class Affirmation: NSObject, NSCoding {
         self.isBanned   = isBanned
         self.isSeen     = isSeen
     }
-    
-    required convenience init(coder aDecoder: NSCoder) {
-        let id = aDecoder.decodeInteger(forKey: "id")
-        let clause = aDecoder.decodeObject(forKey: "clause") as! String
-        let isFavorite = aDecoder.decodeBool(forKey: "isFavorite")
-        let isBanned = aDecoder.decodeBool(forKey: "isBanned")
-        let isSeen = aDecoder.decodeBool(forKey: "isSeen")
-        
-        self.init(id: id, clause: clause, isFavorite: isFavorite, isBanned: isBanned, isSeen: isSeen)
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(id, forKey: "id")
-        aCoder.encode(clause, forKey: "clause")
-        aCoder.encode(isFavorite, forKey: "isFavorite")
-        aCoder.encode(isBanned, forKey: "isBanned")
-        aCoder.encode(isSeen, forKey: "isSeen")
-    }
-    
 }
 
 
@@ -192,9 +168,7 @@ extension Affirmation {
     }
     
     static private func storeLastAffirmation(_ affirmation: Affirmation) {
-        let affirmationData = NSKeyedArchiver.archivedData(withRootObject: affirmation)
-        
-        UserDefaults.standard.set(affirmationData, forKey: AffirmationStoreKeys.LastSeenAffirmationData)
+        UserDefaults.standard.set(affirmation.id, forKey: AffirmationStoreKeys.LastSeenAffirmationID)
         
         UserDefaults.standard.set(Date(), forKey: AffirmationStoreKeys.LastLaunchDate)
         
@@ -218,11 +192,14 @@ extension Affirmation {
     }
     
     class public func daily() -> Affirmation {
-        if let previousdate = UserDefaults.standard.object(forKey: AffirmationStoreKeys.LastLaunchDate) as? Date, previousdate.isInToday,
-           let affirmationData = UserDefaults.standard.data(forKey: AffirmationStoreKeys.LastSeenAffirmationData),
-           let affirmation = NSKeyedUnarchiver.unarchiveObject(with: affirmationData) as? Affirmation {
+        if let previousdate = UserDefaults.standard.object(forKey: AffirmationStoreKeys.LastLaunchDate) as? Date, previousdate.isInToday {
+
+            let affirmations = getAffirmations()
+            let affirmationID = UserDefaults.standard.integer(forKey: AffirmationStoreKeys.LastSeenAffirmationID)
             
-            return affirmation
+            if let index = affirmations.index(where: { $0.id == affirmationID }) {
+                return affirmations[index]
+            }
         }
         
         return Affirmation.random()

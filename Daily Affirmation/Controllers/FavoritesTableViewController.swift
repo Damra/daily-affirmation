@@ -61,16 +61,16 @@ extension FavoritesTableViewController: TBEmptyDataSetDelegate, TBEmptyDataSetDa
     }
     
     func titleForEmptyDataSet(in scrollView: UIScrollView) -> NSAttributedString? {
-        let str = NSLocalizedString("NoFavoritesTitle", comment: "noFavorTitle")
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        let title = NSAttributedString(string: NSLocalizedString("NoFavoritesTitle", comment: ""),
+                                       attributes: [.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)])
         
-        return NSAttributedString(string: str, attributes: attrs)
+        return title
     }
     
     func descriptionForEmptyDataSet(in scrollView: UIScrollView) -> NSAttributedString? {
-        let str = NSLocalizedString("NoFavoritesMessage", comment: "noFavorMessage")
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        let description = NSAttributedString(string: NSLocalizedString("NoFavoritesMessage", comment: ""),
+                                             attributes: [.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)])
         
-        return NSAttributedString(string: str, attributes: attrs)
+        return description
     }
 }
