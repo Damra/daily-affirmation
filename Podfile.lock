@@ -1,41 +1,60 @@
 PODS:
-  - AsyncSwift (2.0.1)
-  - Firebase/AdMob (3.12.0):
+  - AsyncSwift (2.0.4)
+  - BulletinBoard (1.3.0)
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - Fabric (1.7.2)
+  - Firebase/AdMob (4.4.0):
     - Firebase/Core
-    - Google-Mobile-Ads-SDK (= 7.17.0)
-  - Firebase/Core (3.12.0):
-    - FirebaseAnalytics (= 3.6.0)
-    - FirebaseCore (= 3.4.7)
-  - FirebaseAnalytics (3.6.0):
-    - FirebaseCore (~> 3.4)
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
+    - Google-Mobile-Ads-SDK (= 7.24.1)
+  - Firebase/Core (4.4.0):
+    - FirebaseAnalytics (= 4.0.4)
+    - FirebaseCore (= 4.0.9)
+  - FirebaseAnalytics (4.0.4):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (3.4.7):
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.9):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseInstanceID (1.0.8)
-  - FTIndicator (1.1.7):
-    - FTIndicator/FTNotificationIndicator (= 1.1.7)
-    - FTIndicator/FTProgressIndicator (= 1.1.7)
-    - FTIndicator/FTToastIndicator (= 1.1.7)
-  - FTIndicator/FTNotificationIndicator (1.1.7)
-  - FTIndicator/FTProgressIndicator (1.1.7)
-  - FTIndicator/FTToastIndicator (1.1.7)
-  - Google-Mobile-Ads-SDK (7.17.0)
-  - GoogleInterchangeUtilities (1.2.2):
-    - GoogleSymbolUtilities (~> 1.1)
-  - GoogleSymbolUtilities (1.1.2)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - SwifterSwift (1.6.1)
+    - nanopb (~> 0.3)
+  - FirebaseInstanceID (2.0.5)
+  - FTIndicator (1.2.6):
+    - FTIndicator/FTNotificationIndicator (= 1.2.6)
+    - FTIndicator/FTProgressIndicator (= 1.2.6)
+    - FTIndicator/FTToastIndicator (= 1.2.6)
+  - FTIndicator/FTNotificationIndicator (1.2.6)
+  - FTIndicator/FTProgressIndicator (1.2.6)
+  - FTIndicator/FTToastIndicator (1.2.6)
+  - Google-Mobile-Ads-SDK (7.24.1)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - SwifterSwift (4.0.1):
+    - SwifterSwift/AppKit (= 4.0.1)
+    - SwifterSwift/CoreGraphics (= 4.0.1)
+    - SwifterSwift/CoreLocation (= 4.0.1)
+    - SwifterSwift/Foundation (= 4.0.1)
+    - SwifterSwift/SwiftStdlib (= 4.0.1)
+    - SwifterSwift/UIKit (= 4.0.1)
+  - SwifterSwift/AppKit (4.0.1)
+  - SwifterSwift/CoreGraphics (4.0.1)
+  - SwifterSwift/CoreLocation (4.0.1)
+  - SwifterSwift/Foundation (4.0.1)
+  - SwifterSwift/SwiftStdlib (4.0.1)
+  - SwifterSwift/UIKit (4.0.1)
   - TBEmptyDataSet (2.6)
 
 DEPENDENCIES:
   - AsyncSwift (~> 2.0.0)
+  - BulletinBoard
+  - Crashlytics
+  - Fabric
   - Firebase/AdMob
   - Firebase/Core
   - FTIndicator
@@ -48,23 +67,25 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwifterSwift:
-    :commit: 1afd962c0915649920b53d9e0868ac72e40956b7
+    :commit: 67e5bbd003edc72fd46942724dbffe3ae423be52
     :git: https://github.com/omaralbeik/SwifterSwift.git
 
 SPEC CHECKSUMS:
-  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
-  Firebase: 8e99eb1ff553ad5bcc6072cc3d925bb89c1244d6
-  FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
-  FirebaseCore: 46afaf2c2e0419ea7d3acfb08cf26a461a75fe85
-  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  FTIndicator: 61f8d87e56598cb176e933433ad7342bdaa5f11d
-  Google-Mobile-Ads-SDK: a8bf4211624999b73e4184be516f94770b139525
-  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
-  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  SwifterSwift: 5fa694529a7e3576a55665214d8792516d20aa22
+  AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  BulletinBoard: 23c9d98cac654fd484d76f2a0655669974e9bd9c
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  Firebase: 3e92884a63e8f76d107c43a67d2ab9071e1eda10
+  FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
+  FirebaseCore: ebe73f64302705e693b1de9919a76edbdd17a19d
+  FirebaseInstanceID: f2b688c66b972f30d7fa9f5f9f91455454a03b47
+  FTIndicator: d2a7c204341b7b0165b6dbeb5bf6979c6d7d4bb7
+  Google-Mobile-Ads-SDK: ed8004a7265b424568dc84f3d2bbe3ea3fff958f
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SwifterSwift: 1651bdb897df2ae35a7c990fede646d32cd295a3
   TBEmptyDataSet: 7383c353092f33dc572084cfa9182678a132dac7
 
-PODFILE CHECKSUM: 913530a4675fc4da267814c2c5fa70308163214b
+PODFILE CHECKSUM: bdbb17df30bb4af3fc4040fea1ca543f33513627
 
 COCOAPODS: 1.3.1

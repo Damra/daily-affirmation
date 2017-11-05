@@ -11,6 +11,8 @@ import Firebase
 import UserNotifications
 import FTIndicator
 import StoreKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
+        
+        Fabric.with([Crashlytics.self])
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1014468065824783~7402067556")
 

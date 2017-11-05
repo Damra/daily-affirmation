@@ -9,5 +9,7 @@ target 'Daily Affirmation' do
 	pod 'AsyncSwift', '~> 2.0.0'
     pod 'TBEmptyDataSet'
     pod 'BulletinBoard'
+    pod 'Fabric'
+    pod 'Crashlytics'
     
 end
