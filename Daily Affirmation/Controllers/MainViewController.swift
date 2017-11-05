@@ -34,7 +34,11 @@ class MainViewController: UIViewController {
         }
     }
     
-    var speech : AVSpeechUtterance!
+    var speech: AVSpeechUtterance! {
+        didSet {
+            setSpeechUtterance()
+        }
+    }
     let synthesizer = AVSpeechSynthesizer()
     var isAffirmationSuccessfullyShown = false
     
@@ -43,21 +47,30 @@ class MainViewController: UIViewController {
         
         button.layer.cornerRadius = button.frame.size.width / 2.0
         
+        // Double tap for like action
         let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         tap.numberOfTapsRequired = 2
         button.addGestureRecognizer(tap)
         
+        instructionLabel.isHidden = UserDefaults.standard.bool(forKey: "didShowInstruction")
+        
         hailTheTraveller()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAffirmation), name: Notification.Name.NSCalendarDayChanged, object: nil)
+        
+        updateAffirmation()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Report button will be shown after affirmation has been seen.
-        reportButton.isHidden = true
-        
-        dailyAffirmation = Affirmation.daily()
-        
+    @objc func updateAffirmation() {
+        DispatchQueue.main.async {
+            // Report button will be shown after affirmation has been seen.
+            self.reportButton.isHidden = true
+            
+            self.dailyAffirmation = Affirmation.daily()
+        }
+    }
+    
+    func setSpeechUtterance() {
         let localLanguage = NSLocale.preferredLanguages[0]
         
         if localLanguage.starts(with: "tr") {
@@ -66,10 +79,6 @@ class MainViewController: UIViewController {
         } else {
             speech.voice = AVSpeechSynthesisVoice(language: "en-IE")
             speech.rate = 0.39
-        }
-        
-        if !UserDefaults.standard.bool(forKey: "didShowInstruction") {
-            instructionLabel.isHidden = false
         }
     }
 
@@ -219,7 +228,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    @objc func checkNotification() {        
+    func checkNotification() {
         if let notificationStatus = Options.shared.notificationPermissionStatus, notificationStatus == .NotDetermined {
             DispatchQueue.main.async {
                 Bulletin.generateNotificationBulletin(shouldAskLikeFirst: true).presentBulletin(above: self)
