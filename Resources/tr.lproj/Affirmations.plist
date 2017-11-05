@@ -450,7 +450,7 @@
 		<key>id</key>
 		<integer>74</integer>
 		<key>clause</key>
-        <string>Şuan olan her şey beni en ilahi olana götürüyor.</string>
+		<string>Şuan olan her şey beni en ilahi olana götürüyor.</string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -654,7 +654,7 @@
 		<key>id</key>
 		<integer>108</integer>
 		<key>clause</key>
-        <string>Kendimi olduğum gibi çok seviyorum ve kabul ediyorum.</string>
+		<string>Kendimi olduğum gibi çok seviyorum ve kabul ediyorum.</string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -1032,7 +1032,7 @@
 		<key>id</key>
 		<integer>171</integer>
 		<key>clause</key>
-        <string> Zorlukların üstesinden gelme yeteneğim sınırsız ve başarma potansiyelim sonsuz.</string>
+		<string>Zorlukların üstesinden gelme yeteneğim sınırsız ve başarma potansiyelim sonsuz.</string>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -1046,698 +1046,713 @@
 		<key>clause</key>
 		<string>Başarı ve büyüme yaptığım işlerin kaçınılmaz bir sonucu</string>
 	</dict>
-    <dict>
-        <key>id</key>
-        <integer>174</integer>
-        <key>clause</key>
-        <string>Sabrım; güvenimin, sukunetimin ve gücümün en büyük göstergesi. Sabrediyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>175</integer>
-        <key>clause</key>
-        <string>Evrenim beni destekliyor ve koruyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>176</integer>
-        <key>clause</key>
-        <string>Bolluk ve bereketle doluyum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>177</integer>
-        <key>clause</key>
-        <string>Bolluk ve bereketle doluyum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>178</integer>
-        <key>clause</key>
-        <string>Sağlıklıyım, enerjiğim ve hep iyimserim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>179</integer>
-        <key>clause</key>
-        <string>Sağlıklıyım, enerjiğim ve hep iyimserim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>180</integer>
-        <key>clause</key>
-        <string>Neşe ve mutluluk saçıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>181</integer>
-        <key>clause</key>
-        <string>Bedenim rahat, aklım dingin, ruhum barış içinde.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>182</integer>
-        <key>clause</key>
-        <string>Arzuladığım her şeyi  başarabilirim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>183</integer>
-        <key>clause</key>
-        <string>Ben bütünün eşsiz bir parçasıyım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>184</integer>
-        <key>clause</key>
-        <string>Her şeyin bir nedeni vardır. Her şey olumlu sonuçlar doğurur.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>185</integer>
-        <key>clause</key>
-        <string>Affediyorum. Merhametim öfkemi, sevgiyle değiştirir.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>186</integer>
-        <key>clause</key>
-        <string>Karşılaştığım tüm zorlukları atlatabiliyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>187</integer>
-        <key>clause</key>
-        <string>Her geçen gün özgüvenim artıyor ve güçleniyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>188</integer>
-        <key>clause</key>
-        <string>Başarma potansiyalim sonsuz.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>189</integer>
-        <key>clause</key>
-        <string>Verdikçe çoğalıyorum. Paylaştıkça bereketleniyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>190</integer>
-        <key>clause</key>
-        <string>Her gün daha akıllı ve bilge oluyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>191</integer>
-        <key>clause</key>
-        <string>Yaratıcıyım ve ilginç fikirlerin patlamasını deneyimliyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>192</integer>
-        <key>clause</key>
-        <string>Cesurum ve korkularımla yüzleşerek onların üstesinden geliyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>193</integer>
-        <key>clause</key>
-        <string>Geçmişim ile barışığım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>194</integer>
-        <key>clause</key>
-        <string>Sevgiyi, mutluluğu, zarafeti ve pozitif enerjiyi her hareketimle yansıtıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>195</integer>
-        <key>clause</key>
-        <string>Bugün harika bir geleceğin temellerini atıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>196</integer>
-        <key>clause</key>
-        <string> Güvendeyim ve ilahi olan tarafından korunuyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>197</integer>
-        <key>clause</key>
-        <string>Aradığım her şeyin cevabı sorunun içindedir.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>198</integer>
-        <key>clause</key>
-        <string>Kendimi affederek özgür bırakıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>199</integer>
-        <key>clause</key>
-        <string>Ben değerliyim. İnsanlığın ilerlemesine katkıda bulunuyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>200</integer>
-        <key>clause</key>
-        <string>Problemleri, ilginç meydan okumalar olarak görüyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>201</integer>
-        <key>clause</key>
-        <string>Etrafıma güven saçıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>202</integer>
-        <key>clause</key>
-        <string>Zorluklarla, cesaretli bir şekilde yüzleşiyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>203</integer>
-        <key>clause</key>
-        <string>Zorluklarla, cesaretli bir şekilde yüzleşiyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>204</integer>
-        <key>clause</key>
-        <string>Cesur ve yürekliyim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>205</integer>
-        <key>clause</key>
-        <string>Cesur ve yürekliyim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>206</integer>
-        <key>clause</key>
-        <string>Kalbim daima açık. Sevgi benimle.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>207</integer>
-        <key>clause</key>
-        <string>İnsanları sevgiyle kucaklarım. Bu benim gönlümün bol olmasındandır.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>208</integer>
-        <key>clause</key>
-        <string>Sevgiyle çevrelenmiş durumdayım. Nazik insanları kendime çekiyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>209</integer>
-        <key>clause</key>
-        <string>Tereddüt etmeden ve koşulsuz seviyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>210</integer>
-        <key>clause</key>
-        <string>Sevgiyi hak ediyorum. Etrafımdakiler tarafından sevilmekte ve taktir edilmekteyim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>211</integer>
-        <key>clause</key>
-        <string>Tüm ilişkilerimde sevgi ile karşılaşıyorum ve bu karşılaşmaları çok seviyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>212</integer>
-        <key>clause</key>
-        <string>Sevgi, affedicilik ve anlayış ilişkimin temelidir.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>213</integer>
-        <key>clause</key>
-        <string>Partnerimi koşulsuzca kabul ediyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>214</integer>
-        <key>clause</key>
-        <string>İlişkim gittikçe güçleniyor, her geçen gün daha derin ve sevgi dolu bir hal alıyor.
-</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>215</integer>
-        <key>clause</key>
-        <string>Hayatın bana sunduğu tüm zenginliklere açığım.
-        </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>216</integer>
-        <key>clause</key>
-        <string>Yeni kazanç kapıları keşfediyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>217</integer>
-        <key>clause</key>
-        <string>Bedenime iyi bakıyorum ve sağlıklı, dengelenmiş bir diyetle besleniyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>218</integer>
-        <key>clause</key>
-        <string>Bedenim benim tapınağım. Onu her zaman en iyi şekilde koruyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>219</integer>
-        <key>clause</key>
-        <string>Düzenli olarak egzersiz yapıyorum ve vücudumu güçlendiriyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>220</integer>
-        <key>clause</key>
-        <string>İlahi rehberler tüm hareketlerimi yönlendirir.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>221</integer>
-        <key>clause</key>
-        <string>Ben ilahi rehberliğe sahip bir ruhum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>221</integer>
-        <key>clause</key>
-        <string> Evren ile paralel hareket ediyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>222</integer>
-        <key>clause</key>
-        <string>Bugün şahane bir gün olacak. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>223</integer>
-        <key>clause</key>
-        <string>Bugün bana yalnızca sevinç, tatmin ve mutluluk getirecek.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>224</integer>
-        <key>clause</key>
-        <string>Bugünün hangi mucizelerle beni kucaklayacağını heyecanla bekliyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>225</integer>
-        <key>clause</key>
-        <string>Ne olursa olsun, hayallerimin peşinden koşmaya olan inancım tam. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>226</integer>
-        <key>clause</key>
-        <string>Hayallerimi destekleyen ailem ve arkadaşlarım daima yanımda.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>227</integer>
-        <key>clause</key>
-        <string>Başkalarına hayallerini gerçekleştirmelerinde yardımcı olurum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>228</integer>
-        <key>clause</key>
-        <string>Diğerleri hayallerimi anlamadığında anlayışla karşılıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>230</integer>
-        <key>clause</key>
-        <string>İhtiyacım olan tüm desteğe ve yardıma sahibim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>231</integer>
-        <key>clause</key>
-        <string>Yaptığım her şeyde başarılıyım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>232</integer>
-        <key>clause</key>
-        <string>Kendime ve içimdeki rehberliğe güvenim tam.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>233</integer>
-        <key>clause</key>
-        <string>Önce kendimin kahramanıyım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>234</integer>
-        <key>clause</key>
-        <string>Eğlence yerine öğrenmeyi seçiyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>235</integer>
-        <key>clause</key>
-        <string>Şuan ihtiyacım olan yerdeyim. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>236</integer>
-        <key>clause</key>
-        <string>Olumsuz şartlar beni sadece motive eder.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>237</integer>
-        <key>clause</key>
-        <string>Her zaman elimden gelenin en iyisini yaparım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>238</integer>
-        <key>clause</key>
-        <string>Zamanım ve enerjimi en iyi şekilde kullanırım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>239</integer>
-        <key>clause</key>
-        <string>Sağlığıma yaptığım tüm harcamalar, yatırımdır.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>240</integer>
-        <key>clause</key>
-        <string>İlişkim yaratım üzerine kuruludur. ilişkime sürekli katkı sağlarım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>241</integer>
-        <key>clause</key>
-        <string>Enerjimi kimsenin sömürmesine izin veremem. Kendime saygı duyarım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>242</integer>
-        <key>clause</key>
-        <string>Kolay olanı değil, en doğru olanı yaparım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>243</integer>
-        <key>clause</key>
-        <string>Dürüstlük beni özgürleştirir, beni ben yapar. Korkusuzca dürüstüm.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>244</integer>
-        <key>clause</key>
-        <string>Evrenimin bir hazine gibidir ve bu sonsuz bir hazinedir.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>245</integer>
-        <key>clause</key>
-        <string>Kendim için istediğim ne varsa onu çevremdekilere da sunarım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>246</integer>
-        <key>clause</key>
-        <string>Verici olmak beni eksiltmez, aksine güçlendirir.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>250</integer>
-        <key>clause</key>
-        <string>İyi iyilişkilerim en büyük yatırımlarımdır. Onları her zaman korurum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>251</integer>
-        <key>clause</key>
-        <string>Paylaşmak beni zenginleştirir. Verebilme kapasitemi arttırır.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>252</integer>
-        <key>clause</key>
-        <string>Dileğim henüz gerçekleşmediyse, gerçekleşmesi için hala zaman vardır.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>253</integer>
-        <key>clause</key>
-        <string>Dedikodu bana ve amaçlarıma hiç bir şekilde hizmet etmez. Dedikodudan ve boş zaman harcamaktan kaçınırım. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>254</integer>
-        <key>clause</key>
-        <string>Sağığım, kişisel gelişimim, ailem, işim ve zamanım benim hayattaki en önemli değerlerimdir. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>255</integer>
-        <key>clause</key>
-        <string>Ben iyi yürekli ve nazik biriyim, bu yüzden kendim gibi insanları çekerim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>256</integer>
-        <key>clause</key>
-        <string>Kimseyi suçlamam. Her olumsuz olayın sebebi benim bilinçaltımda saklıdır. Ve her olumsuzluğu çözecek güce sahibim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>257</integer>
-        <key>clause</key>
-        <string>Kendimi sonsuz refah içinde hayal ediyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>257</integer>
-        <key>clause</key>
-        <string>Yaşam bana verilmiş harika bir hediye. Değerini biliyor ve mutlu oluyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>258</integer>
-        <key>clause</key>
-        <string>Bir okyanus içindeki bir damla değil, bir damlanın içindeki koca okyanusum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>259</integer>
-        <key>clause</key>
-        <string>Kararımın doğru olduğunu biliyor ve tüm sorumluluğu alıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>260</integer>
-        <key>clause</key>
-        <string>Bilinçaltımın iyileştirici gücünü açığa çıkartıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>261</integer>
-        <key>clause</key>
-        <string>Bilinçaltımdaki yanlış ve negatif düşünceler zihnimden siliniyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>262</integer>
-        <key>clause</key>
-        <string>Dış dünyanın negatif enerjisi bilinçaltım tarafından engelleniyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>263</integer>
-        <key>clause</key>
-        <string>Bilinçaltım affetmeyi ve kabullenmeyi seçiyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>264</integer>
-        <key>clause</key>
-        <string>Para benim dostum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>265</integer>
-        <key>clause</key>
-        <string>Hedeflerimi büyütmeye hazırım.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>266</integer>
-        <key>clause</key>
-        <string>Hayal edebildiğimden daha fazla mutluluk, sevgi ve paranın hayatıma girmesine izin veriyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>267</integer>
-        <key>clause</key>
-        <string>Yaratıcılığımı kolayca ve coşku ile ifade edebiliyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>268</integer>
-        <key>clause</key>
-        <string>Kimsenin onayına ihtiyacım yok. Kendimi onaylıyorum ve kendime güveniyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>269</integer>
-        <key>clause</key>
-        <string>İçimdeki çocuk güvende ve mutlu.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>270</integer>
-        <key>clause</key>
-        <string>Hayatta her şeyin en iyisini hak ediyorum. Bu kendi varlığıma bir borcum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>271</integer>
-        <key>clause</key>
-        <string>Sonsuz güvenim, sonsuz güveneceğim ilişkiler yaratmamı sağlıyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>272</integer>
-        <key>clause</key>
-        <string>Doğa ile bağlantıda oluşum hem ruhuma hem de bedenime çok iyi geliyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>273</integer>
-        <key>clause</key>
-        <string>Ruhumu ve zihnimi yeni ilhamlara açıyorum. Yaratıcılığım her geçen gün artıyor.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>274</integer>
-        <key>clause</key>
-        <string>Biliyorum, ki sonsuz bilgi ve daha önce denenmemiş yaratıcı fikirlerle dolu bir kaynağa sahibim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>275</integer>
-        <key>clause</key>
-        <string>Tek Bilinç'i kullanmak için gereken her şeyi içgüdüsel olarak biliyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>276</integer>
-        <key>clause</key>
-        <string>Yaşamımı olumlu biçimde etkileyecek seçimler yapmak için yönetiliyor ve yönlendiriliyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>277</integer>
-        <key>clause</key>
-        <string>Tüm korku ve endişelerimden arınıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>278</integer>
-        <key>clause</key>
-        <string>Beni yaratıcı eylemlere ulaştıracak Sonsuz Zekâ'ya güveniyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>279</integer>
-        <key>clause</key>
-        <string>Sessizlik ve güven içinde güç kazanıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>280</integer>
-        <key>clause</key>
-        <string>Kendimi harika hissediyorum! Güçlü ve sağlıklıyım ve bunun tadını çıkarıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>281</integer>
-        <key>clause</key>
-        <string>İçimdeki Zekâ'yı neyi, nasıl yapacağımı söylemesi için serbest bırakıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>282</integer>
-        <key>clause</key>
-        <string>Ne geçmişe bağlıyım ne de gelecekle sınırlıyım. Şimdi, şu anda yaşıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>283</integer>
-        <key>clause</key>
-        <string>Şimdi kendimi zamanın bağlarından kurtarıyorum, ilk önce yapılması gerekeni ilk önce yaparak zamana hakim oluyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>284</integer>
-        <key>clause</key>
-        <string>Asla yalnız değilim. Yaptığım her şeyde benimle birlikte çalışan sessiz bir ortağım var. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>285</integer>
-        <key>clause</key>
-        <string>Evrensel Akılda benim için mükemmel bir plân var, almak için aklımı açıyorum.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>286</integer>
-        <key>clause</key>
-        <string> Bilinçaltım Evrensel Akıl'la bütünleşmiş durumda, o yüzden tüm hayatın benimle çalıştığından eminim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>287</integer>
-        <key>clause</key>
-        <string>İçimdeki Ruh her zaman bana destek oluyor, huzur ve güven veriyor. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>288</integer>
-        <key>clause</key>
-        <string>Kimse beni reddedemez, çünkü tüm Hayat'la bütünleştim.</string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>289</integer>
-        <key>clause</key>
-        <string>Başarısızlıktan korkmaya son verdim. Artık hayatın saf hazzı için yaşıyorum. </string>
-    </dict>
-    <dict>
-        <key>id</key>
-        <integer>290</integer>
-        <key>clause</key>
-        <string>Yaptığımı iyi yaparım ve doğal olarak da hep iyi sonuçlar alırım. </string>
-    </dict>
-
+	<dict>
+		<key>id</key>
+		<integer>174</integer>
+		<key>clause</key>
+		<string>Sabrım; güvenimin, sukunetimin ve gücümün en büyük göstergesi. Sabrediyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>175</integer>
+		<key>clause</key>
+		<string>Evrenim beni destekliyor ve koruyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>176</integer>
+		<key>clause</key>
+		<string>Bolluk ve bereketle doluyum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>177</integer>
+		<key>clause</key>
+		<string>Bolluk ve bereketle doluyum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>178</integer>
+		<key>clause</key>
+		<string>Sağlıklıyım, enerjiğim ve hep iyimserim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>179</integer>
+		<key>clause</key>
+		<string>Sağlıklıyım, enerjiğim ve hep iyimserim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>180</integer>
+		<key>clause</key>
+		<string>Neşe ve mutluluk saçıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>181</integer>
+		<key>clause</key>
+		<string>Bedenim rahat, aklım dingin, ruhum barış içinde.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>182</integer>
+		<key>clause</key>
+		<string>Arzuladığım her şeyi  başarabilirim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>183</integer>
+		<key>clause</key>
+		<string>Ben bütünün eşsiz bir parçasıyım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>184</integer>
+		<key>clause</key>
+		<string>Her şeyin bir nedeni vardır. Her şey olumlu sonuçlar doğurur.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>185</integer>
+		<key>clause</key>
+		<string>Affediyorum. Merhametim öfkemi, sevgiyle değiştirir.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>186</integer>
+		<key>clause</key>
+		<string>Karşılaştığım tüm zorlukları atlatabiliyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>187</integer>
+		<key>clause</key>
+		<string>Her geçen gün özgüvenim artıyor ve güçleniyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>188</integer>
+		<key>clause</key>
+		<string>Başarma potansiyalim sonsuz.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>189</integer>
+		<key>clause</key>
+		<string>Verdikçe çoğalıyorum. Paylaştıkça bereketleniyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>190</integer>
+		<key>clause</key>
+		<string>Her gün daha akıllı ve bilge oluyorum. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>191</integer>
+		<key>clause</key>
+		<string>Yaratıcıyım ve ilginç fikirlerin patlamasını deneyimliyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>192</integer>
+		<key>clause</key>
+		<string>Cesurum ve korkularımla yüzleşerek onların üstesinden geliyorum. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>193</integer>
+		<key>clause</key>
+		<string>Geçmişim ile barışığım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>194</integer>
+		<key>clause</key>
+		<string>Sevgiyi, mutluluğu, zarafeti ve pozitif enerjiyi her hareketimle yansıtıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>195</integer>
+		<key>clause</key>
+		<string>Bugün harika bir geleceğin temellerini atıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>196</integer>
+		<key>clause</key>
+		<string> Güvendeyim ve ilahi olan tarafından korunuyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>197</integer>
+		<key>clause</key>
+		<string>Aradığım her şeyin cevabı sorunun içindedir.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>198</integer>
+		<key>clause</key>
+		<string>Kendimi affederek özgür bırakıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>199</integer>
+		<key>clause</key>
+		<string>Ben değerliyim. İnsanlığın ilerlemesine katkıda bulunuyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>200</integer>
+		<key>clause</key>
+		<string>Problemleri, ilginç meydan okumalar olarak görüyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>201</integer>
+		<key>clause</key>
+		<string>Etrafıma güven saçıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>202</integer>
+		<key>clause</key>
+		<string>Zorluklarla, cesaretli bir şekilde yüzleşiyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>203</integer>
+		<key>clause</key>
+		<string>Zorluklarla, cesaretli bir şekilde yüzleşiyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>204</integer>
+		<key>clause</key>
+		<string>Cesur ve yürekliyim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>205</integer>
+		<key>clause</key>
+		<string>Cesur ve yürekliyim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>206</integer>
+		<key>clause</key>
+		<string>Kalbim daima açık. Sevgi benimle.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>207</integer>
+		<key>clause</key>
+		<string>İnsanları sevgiyle kucaklarım. Bu benim gönlümün bol olmasındandır.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>208</integer>
+		<key>clause</key>
+		<string>Sevgiyle çevrelenmiş durumdayım. Nazik insanları kendime çekiyorum. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>209</integer>
+		<key>clause</key>
+		<string>Tereddüt etmeden ve koşulsuz seviyorum. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>210</integer>
+		<key>clause</key>
+		<string>Sevgiyi hak ediyorum. Etrafımdakiler tarafından sevilmekte ve taktir edilmekteyim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>211</integer>
+		<key>clause</key>
+		<string>Tüm ilişkilerimde sevgi ile karşılaşıyorum ve bu karşılaşmaları çok seviyorum. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>212</integer>
+		<key>clause</key>
+		<string>Sevgi, affedicilik ve anlayış ilişkimin temelidir.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>213</integer>
+		<key>clause</key>
+		<string>Partnerimi koşulsuzca kabul ediyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>214</integer>
+		<key>clause</key>
+		<string>İlişkim gittikçe güçleniyor, her geçen gün daha derin ve sevgi dolu bir hal alıyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>215</integer>
+		<key>clause</key>
+		<string>Hayatın bana sunduğu tüm zenginliklere açığım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>216</integer>
+		<key>clause</key>
+		<string>Yeni kazanç kapıları keşfediyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>217</integer>
+		<key>clause</key>
+		<string>Bedenime iyi bakıyorum ve sağlıklı, dengelenmiş bir diyetle besleniyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>218</integer>
+		<key>clause</key>
+		<string>Bedenim benim tapınağım. Onu her zaman en iyi şekilde koruyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>219</integer>
+		<key>clause</key>
+		<string>Düzenli olarak egzersiz yapıyorum ve vücudumu güçlendiriyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>220</integer>
+		<key>clause</key>
+		<string>İlahi rehberler tüm hareketlerimi yönlendirir.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>221</integer>
+		<key>clause</key>
+		<string>Ben ilahi rehberliğe sahip bir ruhum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>222</integer>
+		<key>clause</key>
+		<string> Evren ile paralel hareket ediyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>223</integer>
+		<key>clause</key>
+		<string>Bugün şahane bir gün olacak. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>224</integer>
+		<key>clause</key>
+		<string>Bugün bana yalnızca sevinç, tatmin ve mutluluk getirecek.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>225</integer>
+		<key>clause</key>
+		<string>Bugünün hangi mucizelerle beni kucaklayacağını heyecanla bekliyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>226</integer>
+		<key>clause</key>
+		<string>Ne olursa olsun, hayallerimin peşinden koşmaya olan inancım tam. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>227</integer>
+		<key>clause</key>
+		<string>Hayallerimi destekleyen ailem ve arkadaşlarım daima yanımda.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>228</integer>
+		<key>clause</key>
+		<string>Başkalarına hayallerini gerçekleştirmelerinde yardımcı olurum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>229</integer>
+		<key>clause</key>
+		<string>Diğerleri hayallerimi anlamadığında anlayışla karşılıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>230</integer>
+		<key>clause</key>
+		<string>Sevgim için karşılık beklemem ve tereddüt etmem.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>231</integer>
+		<key>clause</key>
+		<string>İhtiyacım olan tüm desteğe ve yardıma sahibim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>232</integer>
+		<key>clause</key>
+		<string>Yaptığım her şeyde başarılıyım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>233</integer>
+		<key>clause</key>
+		<string>Kendime ve içimdeki rehberliğe güvenim tam.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>234</integer>
+		<key>clause</key>
+		<string>Önce kendimin kahramanıyım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>235</integer>
+		<key>clause</key>
+		<string>Eğlence yerine öğrenmeyi seçiyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>236</integer>
+		<key>clause</key>
+		<string>Şuan ihtiyacım olan yerdeyim. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>237</integer>
+		<key>clause</key>
+		<string>Olumsuz şartlar beni sadece motive eder.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>238</integer>
+		<key>clause</key>
+		<string>Her zaman elimden gelenin en iyisini yaparım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>239</integer>
+		<key>clause</key>
+		<string>Zamanım ve enerjimi en iyi şekilde kullanırım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>240</integer>
+		<key>clause</key>
+		<string>Sağlığıma yaptığım tüm harcamalar, yatırımdır.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>241</integer>
+		<key>clause</key>
+		<string>İlişkim yaratım üzerine kuruludur. ilişkime sürekli katkı sağlarım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>242</integer>
+		<key>clause</key>
+		<string>Enerjimi kimsenin sömürmesine izin veremem. Kendime saygı duyarım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>243</integer>
+		<key>clause</key>
+		<string>Kolay olanı değil, en doğru olanı yaparım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>244</integer>
+		<key>clause</key>
+		<string>Dürüstlük beni özgürleştirir, beni ben yapar. Korkusuzca dürüstüm.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>245</integer>
+		<key>clause</key>
+		<string>Evrenimin bir hazine gibidir ve bu sonsuz bir hazinedir.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>246</integer>
+		<key>clause</key>
+		<string>Kendim için istediğim ne varsa onu çevremdekilere da sunarım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>247</integer>
+		<key>clause</key>
+		<string>Verici olmak beni eksiltmez, aksine güçlendirir.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>248</integer>
+		<key>clause</key>
+		<string>Yaptığım her işte dürüst olmam beni zenginliğe götürüyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>249</integer>
+		<key>clause</key>
+		<string>Büyük başarılara layığım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>250</integer>
+		<key>clause</key>
+		<string>Yakında çok büyük kazançlarım olacak.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>251</integer>
+		<key>clause</key>
+		<string>İyi iyilişkilerim en büyük yatırımlarımdır. Onları her zaman korurum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>252</integer>
+		<key>clause</key>
+		<string>Paylaşmak beni zenginleştirir. Verebilme kapasitemi arttırır.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>253</integer>
+		<key>clause</key>
+		<string>Dileğim henüz gerçekleşmediyse, gerçekleşmesi için hala zaman vardır.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>254</integer>
+		<key>clause</key>
+		<string>Dedikodu bana ve amaçlarıma hiç bir şekilde hizmet etmez. Dedikodudan ve boş zaman harcamaktan kaçınırım. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>255</integer>
+		<key>clause</key>
+		<string>Sağığım, kişisel gelişimim, ailem, işim ve zamanım benim hayattaki en önemli değerlerimdir. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>256</integer>
+		<key>clause</key>
+		<string>Ben iyi yürekli ve nazik biriyim, bu yüzden kendim gibi insanları çekerim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>257</integer>
+		<key>clause</key>
+		<string>Kimseyi suçlamam. Her olumsuz olayın sebebi benim bilinçaltımda saklıdır. Ve her olumsuzluğu çözecek güce sahibim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>258</integer>
+		<key>clause</key>
+		<string>Kendimi sonsuz refah içinde hayal ediyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>259</integer>
+		<key>clause</key>
+		<string>Yaşam bana verilmiş harika bir hediye. Değerini biliyor ve mutlu oluyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>260</integer>
+		<key>clause</key>
+		<string>Bir okyanus içindeki bir damla değil, bir damlanın içindeki koca okyanusum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>261</integer>
+		<key>clause</key>
+		<string>Kararımın doğru olduğunu biliyor ve tüm sorumluluğu alıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>262</integer>
+		<key>clause</key>
+		<string>Bilinçaltımın iyileştirici gücünü açığa çıkartıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>263</integer>
+		<key>clause</key>
+		<string>Bilinçaltımdaki yanlış ve negatif düşünceler zihnimden siliniyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>264</integer>
+		<key>clause</key>
+		<string>Dış dünyanın negatif enerjisi bilinçaltım tarafından engelleniyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>265</integer>
+		<key>clause</key>
+		<string>Bilinçaltım affetmeyi ve kabullenmeyi seçiyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>266</integer>
+		<key>clause</key>
+		<string>Para benim dostum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>267</integer>
+		<key>clause</key>
+		<string>Hedeflerimi büyütmeye hazırım.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>268</integer>
+		<key>clause</key>
+		<string>Hayal edebildiğimden daha fazla mutluluk, sevgi ve paranın hayatıma girmesine izin veriyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>269</integer>
+		<key>clause</key>
+		<string>Yaratıcılığımı kolayca ve coşku ile ifade edebiliyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>270</integer>
+		<key>clause</key>
+		<string>Kimsenin onayına ihtiyacım yok. Kendimi onaylıyorum ve kendime güveniyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>271</integer>
+		<key>clause</key>
+		<string>İçimdeki çocuk güvende ve mutlu.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>272</integer>
+		<key>clause</key>
+		<string>Hayatta her şeyin en iyisini hak ediyorum. Bu kendi varlığıma bir borcum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>273</integer>
+		<key>clause</key>
+		<string>Sonsuz güvenim, sonsuz güveneceğim ilişkiler yaratmamı sağlıyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>274</integer>
+		<key>clause</key>
+		<string>Doğa ile bağlantıda oluşum hem ruhuma hem de bedenime çok iyi geliyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>275</integer>
+		<key>clause</key>
+		<string>Ruhumu ve zihnimi yeni ilhamlara açıyorum. Yaratıcılığım her geçen gün artıyor.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>276</integer>
+		<key>clause</key>
+		<string>Biliyorum, ki sonsuz bilgi ve daha önce denenmemiş yaratıcı fikirlerle dolu bir kaynağa sahibim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>277</integer>
+		<key>clause</key>
+		<string>Tek Bilinç&apos;i kullanmak için gereken her şeyi içgüdüsel olarak biliyorum. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>278</integer>
+		<key>clause</key>
+		<string>Yaşamımı olumlu biçimde etkileyecek seçimler yapmak için yönetiliyor ve yönlendiriliyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>279</integer>
+		<key>clause</key>
+		<string>Tüm korku ve endişelerimden arınıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>280</integer>
+		<key>clause</key>
+		<string>Beni yaratıcı eylemlere ulaştıracak Sonsuz Zekâ&apos;ya güveniyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>281</integer>
+		<key>clause</key>
+		<string>Sessizlik ve güven içinde güç kazanıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>282</integer>
+		<key>clause</key>
+		<string>Kendimi harika hissediyorum! Güçlü ve sağlıklıyım ve bunun tadını çıkarıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>283</integer>
+		<key>clause</key>
+		<string>İçimdeki Zekâ&apos;yı neyi, nasıl yapacağımı söylemesi için serbest bırakıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>284</integer>
+		<key>clause</key>
+		<string>Ne geçmişe bağlıyım ne de gelecekle sınırlıyım. Şimdi, şu anda yaşıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>285</integer>
+		<key>clause</key>
+		<string>Şimdi kendimi zamanın bağlarından kurtarıyorum, ilk önce yapılması gerekeni ilk önce yaparak zamana hakim oluyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>286</integer>
+		<key>clause</key>
+		<string>Asla yalnız değilim. Yaptığım her şeyde benimle birlikte çalışan sessiz bir ortağım var. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>287</integer>
+		<key>clause</key>
+		<string>Evrensel Akılda benim için mükemmel bir plân var, almak için aklımı açıyorum.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>288</integer>
+		<key>clause</key>
+		<string> Bilinçaltım Evrensel Akıl&apos;la bütünleşmiş durumda, o yüzden tüm hayatın benimle çalıştığından eminim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>289</integer>
+		<key>clause</key>
+		<string>İçimdeki Ruh her zaman bana destek oluyor, huzur ve güven veriyor. </string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>290</integer>
+		<key>clause</key>
+		<string>Kimse beni reddedemez, çünkü tüm Hayat&apos;la bütünleştim.</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>291</integer>
+		<key>clause</key>
+		<string>Başarısızlıktan korkmaya son verdim. Artık hayatın saf hazzı için yaşıyorum. </string>
+	</dict>
 </array>
 </plist>

@@ -1057,7 +1057,7 @@
         <key>id</key>
         <integer>175</integer>
         <key>clause</key>
-        <string>I am much stronger than any  challenge.</string>
+        <string>I am much stronger than any challenge.</string>
     </dict>
     <dict>
         <key>id</key>
@@ -1381,7 +1381,7 @@
         <key>id</key>
         <integer>229</integer>
         <key>clause</key>
-        <string> I love unconditionally and without hesitation.</string>
+        <string>I love unconditionally and without hesitation.</string>
     </dict>
     <dict>
         <key>id</key>
@@ -1655,107 +1655,105 @@
     </dict>
     <dict>
         <key>id</key>
-        <integer>274</integer>
+        <integer>275</integer>
         <key>clause</key>
         <string>I allow all good things to come into my life, and I enjoy them.</string>
     </dict>
     <dict>
         <key>id</key>
-        <integer>275</integer>
-        <key>clause</key>
-        <string>I can achieve greatness.</string>
-    </dict>
-    <dict>
-        <key>id</key>
         <integer>276</integer>
         <key>clause</key>
-        <string>My heart is always open and i radiate love.</string>
+        <string>I can achieve greatness.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>277</integer>
         <key>clause</key>
-        <string> I am bold and courageous.</string>
+        <string>My heart is always open and i radiate love.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>278</integer>
         <key>clause</key>
-        <string>I make sound decisions.</string>
+        <string> I am bold and courageous.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>279</integer>
         <key>clause</key>
-        <string>Everything happens for a reason. Everything leads to something positive.</string>
+        <string>I make sound decisions.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>280</integer>
         <key>clause</key>
-        <string>I can achieve greatness.</string>
+        <string>Everything happens for a reason. Everything leads to something positive.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>281</integer>
         <key>clause</key>
-        <string>Love and abundance finds me.</string>
+        <string>I can achieve greatness.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>282</integer>
         <key>clause</key>
-        <string>I always do whats is right for me not what is easy.</string>
+        <string>Love and abundance finds me.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>283</integer>
         <key>clause</key>
-        <string>I never gossip, i do not waste my time.</string>
+        <string>I always do whats is right for me not what is easy.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>284</integer>
         <key>clause</key>
-        <string>All my relationships are long lasting and loving.</string>
+        <string>I never gossip, i do not waste my time.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>285</integer>
         <key>clause</key>
-        <string>I can and will have more than I ever dreamed possible.</string>
+        <string>All my relationships are long lasting and loving.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>286</integer>
         <key>clause</key>
-        <string>I always express my feeling openly to my partner. That way, s/he doesn’t have to guess anything.</string>
+        <string>I can and will have more than I ever dreamed possible.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>287</integer>
         <key>clause</key>
-        <string>I understand my partner perfectly as I am able to see his/her point of view.</string>
+        <string>I always express my feeling openly to my partner. That way, s/he doesn’t have to guess anything.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>288</integer>
         <key>clause</key>
-        <string>My partner loves me as much as I love him/her.</string>
+        <string>I understand my partner perfectly as I am able to see his/her point of view.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>289</integer>
         <key>clause</key>
-        <string>I have attracted the most loving person in my life and my life is now full of joy.</string>
+        <string>My partner loves me as much as I love him/her.</string>
     </dict>
     <dict>
         <key>id</key>
         <integer>290</integer>
         <key>clause</key>
+        <string>I have attracted the most loving person in my life and my life is now full of joy.</string>
+    </dict>
+    <dict>
+        <key>id</key>
+        <integer>291</integer>
+        <key>clause</key>
         <string>I encounter love in all my relationships and I love these encounters.</string>
     </dict>
-
-    
 </array>
 </plist>
